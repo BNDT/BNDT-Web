@@ -1375,8 +1375,134 @@ class Supprot_Client extends WP_Widget
 //tạo slider row 3
 function OurPageInit(){
 register_sidebar(array(
-        'name'=> 'Pagesss',
+        'name'=> 'Thông Tin Công Ti ',
         'id'=>'page_row',
     ));
 }
 add_action('widgets_init','OurPageInit');
+
+// tạo navbar-số điện thoại
+function SDT_Navbar(){
+    register_sidebar(array(
+        'name'=>'Số Liên Hệ',
+        'id'=>'sdt'
+        ));
+}
+add_action('widgets_init','SDT_Navbar');
+//tạo form widget 
+add_action('widgets_init','Form_SDT');
+function Form_SDT(){
+    register_widget('Form_SDT_Widget');
+}
+/**
+* Class tạo form cho sdt
+*/
+class Form_SDT_Widget extends WP_Widget
+{
+    
+    
+    function __construct()
+    {
+        # code...
+        parent::__construct(
+               'sdt_lienhe',
+               'Số Liên Hệ' ,
+                array('description' => 'Forms Số Liên Lạc Với Công Ty')
+            );
+    }
+    function form($instance){
+        parent::form($instance);
+        $default = array('title' => 'SỐ LIÊN LẠC',
+                         'sdt'=> '08-xxx-xxxx',
+                        );
+        $instance=wp_parse_args((array)$instance,$default);
+        $sdt=esc_attr($instance['sdt']);
+         echo "<p>Nhập Số Điện Thoại <input type='text' class='form_control' name='".$this->get_field_name('sdt')."' value='".$sdt."' /></p>";
+         
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['sdt']=strip_tags($new_instance['sdt']);
+        return $instance;
+    }
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $sdt = $instance['sdt'];
+       
+        //In tiêu đề widget
+        // Nội dung trong widget
+           echo "<img src='".get_stylesheet_directory_uri()."/images/telephone65-blue.png' alt='".esc_attr( get_bloginfo('title') )."'>".$sdt; 
+        
+ 
+        // Kết thúc nội dung trong widget
+    }
+}
+//giới thiệu về công ty
+function GioiThieu(){
+register_sidebar(array(
+        'name'=> 'Giới Thiệu Công Ty',
+        'id'=>'info_widget',
+    ));
+}
+add_action('widgets_init','GioiThieu');
+//widget giới thiệu
+add_action('widgets_init','Form_GioiThieu');
+function Form_GioiThieu(){
+    register_widget('Form_GioiThieu_Widget');
+}
+
+class Form_GioiThieu_Widget extends WP_Widget
+{
+    
+    
+    function __construct()
+    {
+        # code...
+        parent::__construct(
+               'gioithieu',
+               'Giới thiệu Công Ty' ,
+                array('description' => 'Forms Giới Thiệu Công Ty')
+            );
+    }
+    function form($instance){
+        parent::form($instance);
+        $default = array('title' => 'GIỚI THIỆU VỀ CÔNG TY',
+                         'value'=> 'Hãy Nhập Nội Dung'
+                        );
+        $instance=wp_parse_args((array)$instance,$default);
+        $title=esc_attr($instance['title']);
+        $value=$instance['value'];
+         echo "<p>Title: <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('title')."' value='".$title."' /></p>";
+         echo "<p><label>Nội Dung</label>
+          <textarea class='widefat' rows='10' cols='20' name='".$this->get_field_name('value')."' id='".$this->get_field_id('value ')."'>".$value."</textarea></p>";
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title']=strip_tags($new_instance['title']);
+        $instance['value']=$new_instance['value'];
+       return $instance;
+    }
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $title=$instance['title'];
+        $value = $instance['value'];
+        //In tiêu đề widget
+        // Nội dung trong widget
+         echo " 
+            <fieldset class='fieldset_style'><legend class='legendStyle'><a>".$title."</a></legend> <p>".wpautop($value)."</p>";
+        // Kết thúc nội dung trong widget
+    }
+}
+function Widget_Content(){
+register_sidebar(array(
+        'name'=> 'Show Thông Tin Bài Viết',
+        'id'=>'show_widget',
+    ));
+}
+add_action('widgets_init','Widget_Content');

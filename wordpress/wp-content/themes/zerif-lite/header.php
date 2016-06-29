@@ -67,7 +67,7 @@ wp_head(); ?>
 	<div class="mobile-bg-fix-whole-site">
 
 
-<header id="home" class="header">
+<header id="home" class="header" >
 
 	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
 
@@ -118,19 +118,23 @@ wp_head(); ?>
 					endif;
 
 				?>
-
 			</div>
-				 <a  href="#" class=' navbar-sdt responsive-logo'>
-			<?php echo '<img src="'.get_stylesheet_directory_uri().'/images/telephone65-blue.png" alt="'.esc_attr( get_bloginfo('title') ).'">';?><strong>
-			  0121.7767.795
-				</strong>
-			  </a> 
+
 			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'zerif-lite' ); ?></a>
 				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
-			</nav>
+			</nav><a  href="#" class=' navbar-sdt'>
+				<strong>
+			  	<?php  
+					dynamic_sidebar('sdt');
+				?>
+				</strong>
+			  </a>
 
+				
+			 
 		</div>
+		
 
 	</div>
 	<!-- / END TOP BAR -->
