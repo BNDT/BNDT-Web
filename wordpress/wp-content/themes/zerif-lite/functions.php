@@ -1270,24 +1270,24 @@ function zerif_lite_update_options_in_pirate_forms() {
 } 
 //khởi tạo widget item
 
-add_action('widgets_init','support_widget');
-    function support_widget() 
+add_action('widgets_init','suport_widget');
+    function suport_widget() 
     {
-        register_widget('Support_Client');
+        register_widget('Supprot_Client');
 
     } 
 /**
-* tạo class Support_Client
+* tạo class Supprot_Client
 */
-class Support_Client extends WP_Widget
+class Supprot_Client extends WP_Widget
 {
     
     function __construct()
     {
         # code...
         parent::__construct(
-               'support_client',
-               'Support Client' ,
+               'supprot_client',
+               'Supprot Client' ,
                 array('description' => 'Forms Hộ Trợ Khách Hàng')
             );
     }
