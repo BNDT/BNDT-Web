@@ -1273,21 +1273,21 @@ function zerif_lite_update_options_in_pirate_forms() {
 add_action('widgets_init','suport_widget');
     function suport_widget() 
     {
-        register_widget('Supprot_Client');
+        register_widget('support_Client');
 
     } 
 /**
-* tạo class Supprot_Client
+* tạo class Support_Client
 */
-class Supprot_Client extends WP_Widget
+class Support_Client extends WP_Widget
 {
     
     function __construct()
     {
         # code...
         parent::__construct(
-               'supprot_client',
-               'Supprot Client' ,
+               'support_client',
+               'Support Client' ,
                 array('description' => 'Forms Hộ Trợ Khách Hàng')
             );
     }
