@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * The template for displaying the footer.
  * Contains the closing of the #content div and all content after
@@ -32,13 +32,16 @@
 	endif;
 ?>
 
-	<div class="container">
+
+
+<div class="container">
 	<div class="col-xs-24 col-sm-24 col-md-12">
 		<div class="pull-left"><span class="icon-hotline"> HOTLINE: 0907.975.779 -   </span>
 		<span class="icon-email"> EMAIL:</span><a href="mailto:kinhdoanh@quangcaophang.com">kinhdoanh@quangcaophang.com</a>
 		</div>
 	</div>
-<!-- / END CONTAINER -->
+ <!-- / END CONTAINER -->
+
 
 </footer> <!-- / END FOOOTER  -->
 

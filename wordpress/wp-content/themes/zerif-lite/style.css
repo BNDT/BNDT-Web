@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: Zerif Lite
 Theme URI: http://themeisle.com/themes/zerif-lite/
 Author: ThemeIsle
@@ -930,7 +930,7 @@ a:active {
 	background: url(images/search_icon.png) no-repeat center center;
 	text-indent: -9999999px;
 }
-.widget_seaFrch label{
+.widget_search label{
 	margin-bottom: 5px;
 	width: 100%;
 	position: relative;
