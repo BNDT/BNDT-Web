@@ -1,4 +1,4 @@
-Thang - Web publishing software
+WordPress - Web publishing software
 
 Copyright 2011-2016 by the contributors
 
