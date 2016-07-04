@@ -1,0 +1,35 @@
+.freestore-support-link {
+    /* color: #f18500; */
+    font-weight: 400;
+    display: block;
+}
+.freestore-support-link:hover {
+    /*color: #E46100;*/
+}
+#adminmenu .wp-submenu li.current a .freestore-support-link {
+	/*color: #f18500 !important;*/
+    font-weight: 700;
+}
+
+.plugins-recommended {
+	
+}
+.plugins-recommended-note {
+	position: relative;
+}
+.plugins-recommended-close {
+	position: absolute;
+	top: -8px;
+	right: 0;
+	background-color: #BBB;
+	width: 25px;
+	height: 20px;
+	text-align: center;
+	padding: 3px 0 0;
+	font-weight: 700;
+	font-size: 13px;
+	text-decoration: none;
+	color: #FFF !important;
+	border-radius: 30px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset;
+}

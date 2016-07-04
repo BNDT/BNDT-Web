@@ -1,0 +1,56 @@
+/* ---- FreeStore custom Customizer CSS ---- */
+#customize-theme-controls #accordion-section-freestore-site-layout-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-header-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-slider-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-blog-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-website-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-colors .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-typography-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-social-section .accordion-section-title:hover,
+#customize-theme-controls #accordion-section-freestore-footer-section .accordion-section-title:hover {
+    background-color: #006CC9;
+    color: #FFF;
+}
+
+#customize-theme-controls #accordion-section-freestore-site-layout-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-header-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-slider-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-blog-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-website-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-colors.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-typography-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-social-section.control-section.open .customize-section-title,
+#customize-theme-controls #accordion-section-freestore-footer-section.control-section.open .customize-section-title {
+    background-color: #006CC9 !important;
+    color: #FFF !important;
+}
+
+.hide-section {
+    display: none !important;
+}
+
+#customize-controls .control-section .customize-section-title h3 {
+	color: inherit;
+}
+
+a.freestore-upgrade-btn {
+    display: inline-block;
+    font-size: 13px;
+    background-color: #006CC9;
+    color: #FFF;
+    line-height: 14px;
+    margin: 10px 0 0;
+    padding: 8px 12px 9px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+a.freestore-upgrade-btn:hover {
+    background-color: #0952A9;
+    color: #FFF;
+}
+
+.kaira-upsell-desc {
+    font-size: 12px;
+    padding: 8px 0 0 5px;
+}
