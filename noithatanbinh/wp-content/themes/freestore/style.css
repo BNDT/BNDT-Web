@@ -2053,20 +2053,21 @@ font-family:FontAwesome
 }
 
 .top-footer{
-	border-top: 2px solid #e3e3e3;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	padding-left: 60px;
 	padding-right: 60px;
 	margin-bottom: 5px;
+	margin-top:5px;
+	font-size: 30px;
 }
 
 .center-footer{
-	border-top: 2px solid #e3e3e3;
+	max-width:1120px;
+	border-top: 3px solid #000;
 	padding-top: 0px;
 	padding-left: 60px;
 	margin-top: 5px;
-	border-bottom: 2px solid #e3e3e3;
+	border-bottom: 3px solid #000;
 	font-size:20px;
 }
 
@@ -2084,7 +2085,7 @@ font-family:FontAwesome
 	height:45px;
 	padding-left:0;
 	margin-left:35px;
-	margin-right: 150px;
+	margin-right: 100px;
 }
 
 .cate-footer ul{
@@ -2121,23 +2122,45 @@ font-family:FontAwesome
     padding: 5px;
 }
 
+.savept-new{
+margin-left: 3px;
+}
+
+.savept{
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 2;
+	right: 5px;
+	top: 5px;
+	background-color: red;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 50%;
+	font-weight: bold;
+}
+
 /* Vinh */
 .row .col-xs-9 li{
 	list-style-type: none;
 	margin-left: 40px;
-	margin-top: 15px;
+	margin-top: 10px;
 }
-.row{
-	padding: 10px 0 10px 0;
-}
+
 .row .widget{
 	margin: 0;
 }
-.row .col-xs-9 form {
-	margin: 5px;
+.row .col-xs-9 li{
+width: none;
 }
-.header-top{
+.header-nav{
 	background: #e96656;
+	padding: 10px;
+}
+.navbar-fixed-top{
+	position: relative;
 }
 .row .col-xs-9 input[type=search] {
 	font-size: 18px;
@@ -2146,5 +2169,41 @@ font-family:FontAwesome
 .row .col-xs-9 input[type=summit] {
 	padding: 9px;
 }
-.row .col-xs-9 {width: none}
 
+
+@media(max-width: 768px){
+	.row .col-xs-9 form{
+		display: none;
+	}
+	.row{
+		float: left;
+		width: 100%;
+	}
+	.menu{
+		float: right;
+	}
+
+}
+@media(min-width: 768px){
+	.container{
+		display: inline;
+
+	}
+	.row .col-xs-9 form{
+		margin-left: 50px;
+	}
+	.row .col-xs-9 input[type=search]{
+		width: 66.667%;
+	}
+	.menu{
+		display: none;
+	}
+	.col-xs-9{
+		width: 55% !important;
+	}
+}
+.cart{
+	background: #fff;
+	width: 12% !important;
+	margin-top: 10px;
+}

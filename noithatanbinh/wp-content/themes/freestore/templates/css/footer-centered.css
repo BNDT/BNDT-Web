@@ -18,7 +18,7 @@ FreeStore - Footer Centered Styling
 
 .site-container > ul {
     margin: 0;
-    padding: 50px 0 20px;
+    padding: 5px 0 20px;
 }
 .site-container > ul > li {
     margin: 0 auto 45px;
@@ -29,7 +29,9 @@ FreeStore - Footer Centered Styling
 }
 
 .site-container .widget ul {
-    margin: 0;
+    color: #225599;
+	font-size: 0.9230769230769231em;
+	margin: 0;
     padding: 0;
 }
 .site-container .widget ul li {
@@ -37,8 +39,13 @@ FreeStore - Footer Centered Styling
     padding: 0;
     list-style-type: none;
     display: block;
+	font-size: 0.8461538461538462em;
+	color: #666;
 }
 
+.site-container .widget ul li:hover {
+	color: #EF532A;
+}
 .site-footer .widget a {
     color: inherit;
 }

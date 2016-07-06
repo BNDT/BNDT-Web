@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+ @font-face{ 
+	font-family: 'CartFont';
+	src: url('../fonts/cartographer-webfont.eot');
+	src: url('../fonts/cartographer-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/cartographer-webfont.woff') format('woff'),
+	     url('../fonts/cartographer-webfont.ttf') format('truetype'),
+	     url('../fonts/cartographer-webfont.svg#cartographer-webfont') format('svg');
+}
+
+#nc_ajax_cart_mini_cart{ 
+width:300px;
+color:#000000;
+ position:absolute; 
+ background:#ffffff;
+ border-radius:10px;
+  padding:15px;
+  border:1px solid #CCC;
+  z-index:99999;
+   }
+a#nc_ajax_cart_snippet{color:#333333;}
+ #nc_ajax_cart_mini_cart table{width:100%;}
+#nc_ajax_cart_mini_cart table,#nc_ajax_cart_mini_cart table tr,#nc_ajax_cart_mini_cart table tr td{color:#333333; vertical-align:middle; font-size:14px; text-align:center;}
+.icon-font{cursor:pointer; }
+.nc_ajax_cart_icon_font{font-family:CartFont; font-size:20px; padding-right:10px; font-size:20px; color:#333333;}
+a#nc_ajax_cart_snippet{text-decoration:none; font-size:16px;}
+.mini_cart_item a,.mini_cart_item  a:hover,.mini_cart_item td a:visited{color:#333333; text-decoration:none;}
+#nc_ajax_cart_mini_cart .woocommerce ul li{list-style:none; display:inline; margin-right:10px; float:left; margin:0 !important; padding:0 !important; float:right;}
+#nc_ajax_cart_mini_cart a.button{color:#333333;}
+#nc_ajax_cart_mini_cart .woocommerce ul::after{clear:both;}
+#nc_ajax_cart_mini_cart tr.mini_cart_item td{border:none !important;}
+tr.mini_cart_item td img{max-width:50px; height:auto;}
+#nc_ajax_cart_mini_cart p.total{text-align:right; color:#333333;}
+#nc_ajax_cart_mini_cart dl.variation dt,#nc_ajax_cart_mini_cart dl.variation p{ font-size:11px;}
+#nc_ajax_cart_mini_cart td.remove-icon a{font-size:20px; color:red; font-weight:bold;}
+#nc_ajax_cart_mini_cart td.item-price{text-align:right;}

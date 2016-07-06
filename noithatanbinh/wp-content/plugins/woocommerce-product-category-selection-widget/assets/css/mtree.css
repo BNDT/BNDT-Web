@@ -1,0 +1,71 @@
+ul.mtree {
+  /*opacity: 0;*/
+  margin-left: 0;
+
+}
+ul.mtree ul {
+  margin-left: 1em;
+}
+ul.mtree li {
+  list-style: none;
+}
+ul.mtree a {
+  display: block;
+}
+ul.mtree li.mtree-node > a {
+  font-weight: normal;
+}
+
+ul.mtree a {
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+
+ul.mtree.default li {
+  font-size: 14px;
+}
+ul.mtree.default a {
+  padding: 0px 5px;
+}
+ul.mtree.default a:hover {
+  text-decoration: underline;
+}
+ul.mtree.default li.mtree-node:before {
+  float: left;
+  margin-left: .5em;
+  zoom: .8;
+  /*margin-top: .1em;*/
+  color: #777;
+}
+ul.mtree.default li.mtree-open:before {
+  content: '-';
+}
+ul.mtree.default li.mtree-closed:before {
+  content: '+';
+}
+ul.mtree.default ul > li:first-child {
+  margin-top: .1em;
+}
+ul.mtree.default ul > li:last-child {
+  margin-bottom: .3em;
+}
+ul.mtree.default ul a {
+ 
+}
+
+ul.mtree.default li > a:hover, ul.mtree.default li.current-cat > a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+li.current-cat-parent > .children {
+
+  height: auto  !important;
+
+  display: block !important;
+
+}

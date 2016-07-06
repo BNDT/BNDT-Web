@@ -351,3 +351,243 @@ register_sidebar(array(
     ));
 }
 add_action('widgets_init','Cart_Widget');
+
+/*Hiệp -- footer widget*/
+
+add_action('widgets_init','Footer_Form');
+function Footer_Form(){
+    register_widget('Footer_Form_Widget');
+}
+
+class Footer_Form_Widget extends WP_Widget
+{
+    function __construct()
+    {
+        # code...
+        parent::__construct(
+               'footerform',
+               'Form Footer' ,
+                array('description' => 'Forms Tạo Footer')
+            );
+    }
+    function form($instance){
+        parent::form($instance);
+        $default = array('icon' => 'Url icon của bạn',
+                         'sdt'=> 'Hãy Nhập Số Điện Thoại',
+						 'facebook' => 'Nhập url Facebook',
+						 'google' => 'Nhập url Google Plus',
+						 'twitter' => 'Nhập url Twitter',
+						 'youtube' => 'Nhập url Youtube'
+                        );
+        $instance=wp_parse_args((array)$instance,$default);
+        $icon=$instance['icon'];
+        $sdt=$instance['sdt'];
+		$facebook=$instance['facebook'];
+		$google=$instance['google'];
+		$twitter=$instance['twitter'];
+		$youtube=$instance['youtube'];
+         echo "<p><label>Url Icon Logo:</label> 
+		 <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('icon')."' value='".$icon."' /></p>";
+         echo "<p><label>Số Hotline:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('sdt')."' value='".$sdt."' /></p>";
+		 echo "<p><label>Url Facebook:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('facebook')."' value='".$facebook."' /></p>";
+		 echo "<p><label>Url Google:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('twitter')."' value='".$twitter."' /></p>";
+		 echo "<p><label>Url Twitter:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('google')."' value='".$google."' /></p>";
+		 echo "<p><label>Url Youtube:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('youtube')."' value='".$youtube."' /></p>";
+		 //<textarea class='widefat' rows='10' cols='20' name='".$this->get_field_name('value')."' id='".$this->get_field_id('value ')."'>".$value."</textarea></p>";
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['icon']=strip_tags($new_instance['icon']);
+        $instance['sdt']=$new_instance['sdt'];
+		$instance['facebook']=$new_instance['facebook'];
+		$instance['google']=$new_instance['google'];
+		$instance['twitter']=$new_instance['twitter'];
+		$instance['youtube']=$new_instance['youtube'];
+       return $instance;
+    }
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        $icon = apply_filters( 'widget_icon', $instance['icon'] );
+        $icon=$instance['icon'];
+        $sdt = $instance['sdt'];
+		$facebook = $instance['facebook'];
+		$twitter = $instance['twitter'];
+		$google = $instance['google'];
+		$youtube = $instance['youtube'];
+        //In widget
+        // Nội dung trong widget
+         echo " <div class='container'>
+					<div class='row top-footer'>
+						<div class='logo col-xs-2' style='float:left'>
+					<a href='#'>
+						<img src ='".get_stylesheet_directory_uri().$icon."' alt='Logo nội thất an bình'>
+					</a>
+			</div>	
+			
+	<div class='col-xs-8' style='padding-top:1px'>
+		<span class='icon-hotline' background-color:#e3e3e3;padding-right:60px'>
+			<em>Hotline : ".$sdt."</em>
+		</span>
+		
+		<div class='row' style='float:right'>
+					<a href='".$facebook."'> <img src ='wp-content/uploads/2016/07/icon-facebook45.png' alt='facebook nội thất an bình'></a>
+					<a href='".$google."'> <img src ='wp-content/uploads/2016/07/icon-google45.png' alt='google plus nội thất an bình'></a>
+					<a href='".$twitter."'> <img src ='wp-content/uploads/2016/07/icon-twitter45.png' alt='twitter nội thất an bình'></a>
+					<a href='".$youtube."'> <img src ='wp-content/uploads/2016/07/icon-youtube45.png' alt='youtube nội thất an bình'></a>
+		</div>			
+	</div>
+	</div>
+	</div>
+	";
+    }
+	
+}
+
+add_action('widgets_init','Bottom_Footer');
+function Bottom_Footer(){
+    register_widget('Bottom_Footer_Widget');
+}
+
+class Bottom_Footer_Widget extends WP_Widget
+{
+    
+    
+    function __construct()
+    {
+        # code...
+        parent::__construct(
+               'bottomfooter',
+               'Bottom Footer' ,
+                array('description' => 'Bottom Footer Form')
+            );
+    }
+    function form($instance){
+        parent::form($instance);
+        $default = array('icon' => 'Logo Nội thất An Bình',
+                         'value'=> 'Hãy Nhập Nội Dung'
+                        );
+        $instance=wp_parse_args((array)$instance,$default);
+        $icon=esc_attr($instance['icon']);
+        $title=$instance['title'];
+		$diachi=$instance['diachi'];
+		$chinhanh=$instance['chinhanh'];
+		$truso=$instance['truso'];
+		$hotline=$instance['hotline'];
+         echo "<p>Url Icon: <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('icon')."' value='".$icon."' /></p>";
+         echo "<p><label>Tên Công Ty:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('title')."' value='".$title."' /></p>";
+		 echo "<p><label>Địa Chỉ:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('diachi')."' value='".$diachi."' /></p>";
+		 echo "<p><label>Chi Nhánh:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('chinhanh')."' value='".$chinhanh."' /></p>";
+		 echo "<p><label>Trụ sở:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('truso')."' value='".$truso."' /></p>";
+		 echo "<p><label>Hotline:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('hotline')."' value='".$hotline."' /></p>";
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['icon']=strip_tags($new_instance['icon']);
+        $instance['title']=$new_instance['title'];
+		$instance['diachi']=$new_instance['diachi'];
+		$instance['chinhanh']=$new_instance['chinhanh'];
+		$instance['truso']=$new_instance['truso'];
+		$instance['hotline']=$new_instance['hotline'];
+       return $instance;
+    }
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        $icon = apply_filters( 'widget_icon', $instance['icon'] );
+        $icon=$instance['icon'];
+        $title = $instance['title'];
+		$diachi = $instance['diachi'];
+		$chinhanh = $instance['chinhanh'];
+		$truso = $instance['truso'];
+		$hotline = $instance['hotline'];
+        echo " 
+	<div class='container'>
+		<div class='bottom-footer row'>
+			<div class='col-xs-1'><p><a href='#'><img src='".$icon."' alt='Nội thất an bình'></a></p></div>
+			<div class='col-xs-7'> 
+			<p><strong>".$title."</strong><br/>
+			ĐC GPKD : ".$diachi."<br/>
+			Trụ sở : ".$truso."<br/>
+			Chi nhánh : ".$chinhanh."<br/>
+			Hotline : ".$hotline."</p>
+			</div>
+		</div>
+	</div>	
+            ";
+	}
+}
+
+//short-code Giảm giá
+
+function woocommerce_sale_products( $atts ){
+    global $woocommerce_loop;
+
+    extract( shortcode_atts( array(
+        'per_page'      => '12',
+        'columns'       => '4',
+        'orderby'       => 'title',
+        'order'         => 'asc'
+        ), $atts ) );
+
+    $args = array(
+        'post_type' => 'product',
+        'post_status' => 'publish',
+        'ignore_sticky_posts'   => 1,
+        'orderby' => $orderby,
+        'order' => $order,
+        'posts_per_page' => $per_page,
+        'meta_query' => array(
+            array(
+                'key' => '_visibility',
+                'value' => array('catalog', 'visible'),
+                'compare' => 'IN'
+            ),
+            array(
+                'key' => '_sale_price',
+                'value' => 0,
+                'compare' => '>',
+                'type' => 'NUMERIC'
+            )
+        )
+    );
+
+    ob_start();
+
+    $products = new WP_Query( $args );
+
+    $woocommerce_loop['columns'] = $columns;
+
+    if ( $products->have_posts() ) : ?>
+
+        <ul class="products">
+
+            <?php while ( $products->have_posts() ) : $products->the_post(); ?>
+
+                <?php woocommerce_get_template_part( 'content', 'product' ); ?>
+
+            <?php endwhile; // end of the loop. ?>
+
+        </ul>
+
+    <?php endif;
+
+    wp_reset_query();
+
+    return ob_get_clean();
+}
+
+add_shortcode('sale_products', 'woocommerce_sale_products');
+// add vào : [sale_products per_page="12" columns="4" orderby="date" order="desc" ]

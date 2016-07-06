@@ -13,13 +13,13 @@
 
 get_header(); ?>
 	<!-- Start Slider -->
-	<div style="margin-top:5px" height = "400px">
-	<span style="float:left">
-	<?php //echo do_shortcode("[metaslider id=29]"); 	?>
+	<div style="margin-top:5px; margin-bottom: 5px;">
+	<span >
+	<?php masterslider(1); ?>
 	</span>
 	<!-- End Slider -->
 	<!-- Right -->
-	<span class="menu-right">
+	<!-- <span class="menu-right">
       <div class="right__block">
         <div class="right__block__title">Mua sắm nhanh chóng</div>
         <div class="right__block__wrapper">
@@ -34,6 +34,8 @@ get_header(); ?>
         </div>
       </div>
     </span>
+	-->
+	<!-- End Right -->
 	</div>
 	<?php if ( is_home() ) : ?>
 	<div id="primary" class="content-area <?php echo ( get_theme_mod( 'freestore-blog-full-width', false ) ) ? sanitize_html_class( ' content-area-full' ) : ''; ?>">

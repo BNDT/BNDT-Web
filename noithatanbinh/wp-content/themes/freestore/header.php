@@ -27,9 +27,9 @@ global $woocommerce;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="page" class="hfeed site <?php echo sanitize_html_class( get_theme_mod( 'freestore-slider-type' ) ); ?>">
+<div id="page" class="hfeed site <?php echo sanitize_html_class( get_theme_mod( 'freestore-slider-type' ) ); ?>" data-toggle="collapse" data-target="navbar-collapse">
 	
-<header class="header-top">
+<nav class="navbar navbar-fixed-top header-nav >
 	<div class="container">
 		<div class="row"> 
 			 <div class='col-xs-3'>
@@ -42,12 +42,14 @@ global $woocommerce;
 			 <div class="col-xs-9">
 			 	<?php  dynamic_sidebar('search_id');?>
 			 </div>
-			 <div class="col-xs-3">
-			 	<?php  dynamic_sidebar('cart_id');?>
-			 </div>
-		</div>
+			<div class='col-xs-2 cart'>
+			<?php echo do_shortcode("[nc_ajax_cart]"); ?>	
+			</div>
+				<a>
+				<span class="fa fa-search fa-2x menu"> </span>
+			</div>
 	</div>
-</header>
-<?php masterslider(1); ?>
-	<div class="site-container <?php echo ( ! is_active_sidebar( 'sidebar-1' ) ) ? sanitize_html_class( 'content-no-sidebar' ) : sanitize_html_class( 'content-has-sidebar' ); ?>">
+</nav>
+
+	<div class="site-container <?php echo ( ! is_active_sidebar( 'sidebar-1' ) ) ? sanitize_html_class( 'content-no-sidebar' ) : sanitize_html_class( 'content-has-sidebar' ); ?>" style="margin-top:85px">
 	

@@ -14,6 +14,8 @@
 	<div class="fb-like" data-href="https://www.facebook.com/ngoc.thao.hoang.162?fref=ts" data-width="100" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 	    
 	<footer id="colophon" role="contentinfo">
+	<?php get_template_part( '/templates/footers/footer-centered' ); ?>
+<?php //echo ( get_theme_mod( 'freestore-site-layout' ) == 'freestore-site-boxed' ) ? '</div>' : ''; ?>
 	<div class="container">
 		<div class="row top-footer" >
 			<div class="logo col-xs-2 image-logo-footer" style="float:left;padding-left:60">
@@ -98,7 +100,7 @@
 	</div>
 	<div class="container">
 		<div class="bottom-footer row">
-			<div class="col-xs-1" style="float:left"><p><a href="#"><img src="<?php echo(wp_upload_dir('2016/07')['url']); ?>" alt="Nội thất an bình"></a></p></div>
+			<div class="col-xs-1" style="float:left"><p><a href="#"><img src="<?php echo(wp_upload_dir('2016/07')['url']); ?>/cropped-noithatanbinh-logo.jpg" alt="Nội thất an bình"></a></p></div>
 			<div class="col-xs-7"> 
 			<p  style="text-align:left;font-size:12px"><strong>Công ty TNHH TM - DV Nội Thất An Bình</strong><br/>
 			ĐC GPKD : 37/11 Ngô Đức Kế, P.12, Q.Bình Thạnh<br/>
@@ -108,11 +110,26 @@
 			</div>
 		</div>
 	</div>	
+	<?php 
+	$categories = get_categories(array('hide_empty' => false, 'child_of' => 10));
+foreach ($categories as $category) {
+    $option = '<option value="/category/archives/'.$category->category_nicename.'">';
+    $option .= $category->cat_name;
+    $option .= ' ('.$category->category_count.')';
+    $option .= '</option>';
+echo $option;}
+
+
+	?>
 </footer>
 
 	
 </div><!-- #page -->
 
+
 <?php wp_footer(); ?>
+
+
+
 </body>
 </html>
