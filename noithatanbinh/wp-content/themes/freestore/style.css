@@ -827,6 +827,7 @@ a:active {
 	padding: 30px 2% 30px 0;
 	position: relative;
 	box-shadow: -1px 0 0 #D7D7D7 inset;
+	display: inline-block;
 }
 
 .widget-area {
@@ -1980,3 +1981,170 @@ body.freestore-page-styling-raised.woocommerce #container,
 body.freestore-page-styling-raised.woocommerce-page #container {
 	background-color: #FBFBFB;
 }
+
+.menu-right {
+    display: none;
+}
+@media (min-width: 1200px){
+.menu-right {
+    display: block;
+	float: left;
+    right: 0;
+    width: 250px;
+    height: 378px;
+    position: absolute;
+    background: #fff;
+}}
+
+@media (min-width: 1200px){
+.right__block__item {
+    position: relative;
+    line-height: 1.1em;
+    margin: 0 0 18px 0;
+    vertical-align: middle;
+    color: #6e686e;
+}}
+
+@media (min-width: 1200px){
+.right__block__title {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 11px 15px;
+    border-left: 4px solid #f37021;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: #E8E8E8;
+    color: #5E5E5E;
+    font-weight: bold;
+}}
+
+@media (min-width: 1200px){
+.right__block__wrapper {
+    padding: 10px;
+    border-left: 4px solid #E8E8E8;
+    height: 338px;
+}}
+
+@media (min-width: 1200px){
+.right__block__item i {
+    padding: 4px;
+    border: 1px solid #6E686E;
+    border-radius: 100%;
+    margin-right: 7px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: 12px;
+}}
+.row .col-xs-9 li {
+list-style-type:  none;
+}
+
+/* Hiep */
+
+.icon-hotline:before{
+margin-right:5px;
+line-height:25px;
+content:"\f098";
+font-family:FontAwesome
+}
+
+.top-footer{
+	border-top: 2px solid #e3e3e3;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-bottom: 5px;
+}
+
+.center-footer{
+	border-top: 2px solid #e3e3e3;
+	padding-top: 0px;
+	padding-left: 60px;
+	margin-top: 5px;
+	border-bottom: 2px solid #e3e3e3;
+	font-size:20px;
+}
+
+.bottom-footer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-top: 5px;
+	
+}
+
+.logo {
+	width: 200px;
+	height:45px;
+	padding-left:0;
+	margin-left:35px;
+	margin-right: 150px;
+}
+
+.cate-footer ul{
+	display:inline;
+	list-style: none;
+	padding: 0;
+}
+.cate-footer .cate-main{
+	float:left;
+	display: inline;
+}
+.cate-footer .cate-main:nth-child(5n+5){
+	clear: both;
+}
+.cate-footer .cate-main a{
+	color: #225599;
+	font-size: 0.9230769230769231em;
+}
+
+.cate-footer ul a.sub-cate{
+	font-size: 0.8461538461538462em;
+	color: #666;
+}
+.cate-footer ul a.sub-cate:hover{
+	color: #EF532A;
+}
+
+.list-unstyled {
+}
+
+.image-logo-footer
+{
+	background: red;
+    padding: 5px;
+}
+
+/* Vinh */
+.row .col-xs-9 li{
+	list-style-type: none;
+	margin-left: 40px;
+	margin-top: 15px;
+}
+.row{
+	padding: 10px 0 10px 0;
+}
+.row .widget{
+	margin: 0;
+}
+.row .col-xs-9 form {
+	margin: 5px;
+}
+.header-top{
+	background: #e96656;
+}
+.row .col-xs-9 input[type=search] {
+	font-size: 18px;
+	width: 400px; 
+}
+.row .col-xs-9 input[type=summit] {
+	padding: 9px;
+}
+.row .col-xs-9 {width: none}
+

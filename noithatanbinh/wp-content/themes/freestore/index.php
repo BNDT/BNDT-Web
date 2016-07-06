@@ -12,7 +12,29 @@
  */
 
 get_header(); ?>
-
+	<!-- Start Slider -->
+	<div style="margin-top:5px" height = "400px">
+	<span style="float:left">
+	<?php //echo do_shortcode("[metaslider id=29]"); 	?>
+	</span>
+	<!-- End Slider -->
+	<!-- Right -->
+	<span class="menu-right">
+      <div class="right__block">
+        <div class="right__block__title">Mua sắm nhanh chóng</div>
+        <div class="right__block__wrapper">
+          <div class="right__block__item"><i class="fa fa-shopping-cart"></i>Tiện lợi và nhanh chóng</div>
+          <div class="right__block__item"><i class="fa fa-check-square"></i>Hàng hóa được dảm bảo</div>
+          <div class="right__block__item"><i class="fa fa-dollar"></i>Giá bán chính xác nhất</div>
+          <div class="right__block__item"><i class="fa fa-thumbs-up"></i>Nhiều chương trình giảm giá</div>
+          <div class="right__block__item"><i class="fa fa-truck"></i>Giao hàng cực nhanh <i class="fa fa-check-circle" style="border: none;font-size: 14px;color: rgb(79, 172, 31);"></i></div>
+          <div class="right__block__item"><i class="fa fa-money"></i>Thanh toán khi nhận hàng</div>
+          <div class="right__block__item"><i class="fa fa-history"></i>Đổi hàng trong 7 ngày</div>
+          <div class="right__block__item"><i class="fa fa-smile-o"></i>Dịch vụ CSKH chu đáo nhất</div>
+        </div>
+      </div>
+    </span>
+	</div>
 	<?php if ( is_home() ) : ?>
 	<div id="primary" class="content-area <?php echo ( get_theme_mod( 'freestore-blog-full-width', false ) ) ? sanitize_html_class( ' content-area-full' ) : ''; ?>">
     <?php else : ?>
@@ -24,28 +46,8 @@ get_header(); ?>
 		<?php get_template_part( '/templates/titlebar' ); ?>
 
 		<?php echo do_shortcode('[recent_products per_page="12" columns="4"]'); ?>
-		<?php if ( have_posts() ) : ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'templates/contents/content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'templates/contents/content', 'none' ); ?>
-
-		<?php endif; ?>
+		
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

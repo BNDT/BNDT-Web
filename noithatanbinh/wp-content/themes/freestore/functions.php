@@ -321,3 +321,33 @@ function freestore_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'freestore_register_required_plugins' );
+
+/**
+@ Chèn CSS và Javascript vào theme
+@ sử dụng hook wp_enqueue_scripts() để hiển thị nó ra ngoài front-end
+**/
+function thachpham_styles() {
+  /*
+   * Hàm get_stylesheet_uri() sẽ trả về giá trị dẫn đến file style.css của theme
+   * Nếu sử dụng child theme, thì file style.css này vẫn load ra từ theme mẹ
+   */
+  wp_register_style( 'font-awesome', get_template_directory_uri() . '/font-awesome.min.css', 'all' );
+  wp_register_style( 'bootstrap', get_template_directory_uri() . '/includes/bootstrap/css/bootstrap.css', 'all' );
+  //wp_enqueue_style( 'font-awesome' );
+  wp_enqueue_style( 'bootstrap' );
+}
+add_action( 'wp_enqueue_scripts', 'thachpham_styles' );
+function Search_Widget(){
+register_sidebar(array(
+        'name'=> 'Search',
+        'id'=>'search_id',
+    ));
+}
+add_action('widgets_init','Search_Widget');
+function Cart_Widget(){
+register_sidebar(array(
+        'name'=> 'cart widget',
+        'id'=>'cart_id',
+    ));
+}
+add_action('widgets_init','Cart_Widget');
