@@ -1,0 +1,1179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooDiscuz - WooCommerce Comments\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-21 19:37+0400\n"
+"PO-Revision-Date: Wed Oct 14 2015 11:15:38 GMT+0200 (Västeuropa, sommartid)\n"
+"Last-Translator: Patrik <patrik@datanovisen.se>\n"
+"Language-Team: advancedcoding <advancedcoding@mail.ru>\n"
+"Language: Swedish\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpc.php\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Loco-Target-Locale: sv_SE"
+
+#. Name of the plugin
+msgid "WooDiscuz - WooCommerce Comments"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"WooCommerce product comments and discussion Tab. Allows your customers to "
+"discuss about your products and ask pre-sale questions. Adds a new "
+"\"Discussions\" Tab next to \"Reviews\" Tab. Your shop visitors will thank you "
+"for ability to discuss about your products directly on your website product "
+"page. WooDiscuz also allows to vote for comments and share products."
+msgstr ""
+
+#. Author of the plugin
+msgid "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://www.gvectors.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "http://woodiscuz.com"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:128
+msgid "WooDiscuz requires Woocommerce to be installed!"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:199
+msgid "Reviews"
+msgstr "Betyg"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:242
+msgid "WooDiscuz"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:243
+msgid "Woocomerce Review"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:398
+msgid "anonymous"
+msgstr "anonym"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:713
+msgid "Settings"
+msgstr "Inställningar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:715
+msgid "Phrases"
+msgstr "Fraser"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:793 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:384 .
+#: ./../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:94 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-email.php:94
+msgid "Subscribe Confirmation"
+msgstr "Bekräfta prenumerationen"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:794 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:385 .
+#: ./../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:105
+msgid ""
+"Hi, <br/> You just subscribed for new comments on our website. This means "
+"you will receive an email when new comments are posted according to "
+"subscription option you've chosen. <br/> To activate, click confirm below. "
+"If you believe this is an error, ignore this message and we'll never bother "
+"you again."
+msgstr ""
+"Hejsan, <br/> Du har precis påbörjat en prenumeration för nya kommentarer. "
+"När någon lämnar en kommentar får du ett mail. <br/> För att aktivera din "
+"prenumeration, vänligen klicka på länken nedan. <br/> Har du fått detta mail "
+"av misstag? Bara ignorera detta mailet, vi kommer inte att skicka fler."
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:815 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:391 .
+#: ./../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:115
+msgid "New Reply"
+msgstr "Bytt svar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/wpc.php:816 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:392
+msgid "New reply on the discussion section you've been interested in"
+msgstr "Nytt svar på en fråga som du har varit intresserad av."
+
+#: ../../plugins/woodiscuz-woocommerce-comments/comment-form/tpl-comment.php:137 .
+#: ./../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 330 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:27
+msgid "Edit"
+msgstr "Ändra"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:31 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:215
+msgid "Hacker?"
+msgstr "Är du en hacker?"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:79
+msgid "WooDiscuz General Settings"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:164
+msgid "General settings"
+msgstr "Generella inställningar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:165 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-show-
+#: hide.php:2
+msgid "Show/Hide Components"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:166
+msgid "Email Subscription"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:167 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-style.
+#: php:2
+msgid "Background and Colors"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:196
+msgid "Reset Options"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:197 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:357
+msgid "Save Changes"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:313
+msgid "WooDiscuz Front-end Phrases"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:324
+msgid "General"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:325
+msgid "Form"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:326
+msgid "Comment"
+msgstr "Kommentar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:327
+msgid "Date/Time"
+msgstr "Datum/tid"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:328 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:323
+msgid "Email"
+msgstr "E-post"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options.php:329
+msgid "Notification"
+msgstr "Notis"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 319
+msgid "Discussions"
+msgstr "Frågor"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 320
+msgid "Got something to discuss?"
+msgstr "Har du några frågor om denna produkt?"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 321
+msgid "Start the discussion"
+msgstr "Ställ en fråga "
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 322
+msgid "Join the discussion"
+msgstr "Anslut till frågetråden"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 324
+msgid "Name"
+msgstr "Namn"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 325
+msgid "Please insert the code above to comment"
+msgstr "Vänligen fyll i koden ovan"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 326
+msgid "Post Comment"
+msgstr "Ställ fråga"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 327
+msgid "Load More Comments"
+msgstr "Visa fler frågor"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 328 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:7
+msgid "Reply"
+msgstr "Svara"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 329 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:17
+msgid "Share"
+msgstr "Dela"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 331 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:181
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 332 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:171
+msgid "Save"
+msgstr "Spara"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 333 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:37
+msgid "Share On Facebook"
+msgstr "Dela på Facebook"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 334 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:47
+msgid "Share On Twitter"
+msgstr "Dela på Twitter"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 335 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:57
+msgid "Share On Google"
+msgstr "Dela på Google+"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 336 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:67
+msgid "Share On VKontakte"
+msgstr "Dela på VKOntakte"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 337 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:77
+msgid "Share On Odnoklassniki"
+msgstr "Dela på Odnoklassniki"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 338 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:87
+msgid "Hide Replies"
+msgstr "Göm svar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 339 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:97
+msgid "Show Replies"
+msgstr "Visa svar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 340
+msgid "Guest"
+msgstr "Gäst"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 341
+msgid "Member"
+msgstr "Medlem"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 342
+msgid "Customer"
+msgstr "Kund"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 343
+msgid "Support"
+msgstr "Support"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 344
+msgid "New Comment"
+msgstr "Ny kommentar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 345
+msgid "New comment on the product discussion section you've been interested in"
+msgstr "Ny kommentar på den produktdiskussion som du har varit intresserad av"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 346
+msgid "Leave a Reply"
+msgstr "LÄmna ett svar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 347
+msgid "Please, leave a reply on"
+msgstr "Vänligen lämna ett svar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 348
+msgid "please fill out this field to comment"
+msgstr "vänligen fyll i detta fält för att kommentera"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 349
+msgid "email address is invalid"
+msgstr "e-post adressen verkar inte vara giltlig"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 350
+msgid "year"
+msgstr "år"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 351
+msgid "years"
+msgstr "år"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 352
+msgid "month"
+msgstr "månad"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 353
+msgid "months"
+msgstr "månader"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 354
+msgid "day"
+msgstr "dag"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 355
+msgid "days"
+msgstr "dagar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 356
+msgid "hour"
+msgstr "timme"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 357
+msgid "hours"
+msgstr "timmar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 358
+msgid "minute"
+msgstr "minut"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 359
+msgid "minutes"
+msgstr "minuter"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 360
+msgid "second"
+msgstr "sekund"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 361
+msgid "seconds"
+msgstr "sekunder"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 362
+msgid "s"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 363
+msgid "right now"
+msgstr "just nu"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 364
+msgid "ago"
+msgstr "sedan"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 365
+msgid "today"
+msgstr "idag"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 366 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:27
+msgid "You must be"
+msgstr "Du behöver"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 367
+msgid "logged in"
+msgstr "inloggad"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 368
+msgid "to post a comment."
+msgstr "för att skriva en kommentar."
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 369 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:147
+msgid "Vote Up"
+msgstr "Rösta upp"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 370 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-comment.php:157
+msgid "Vote Down"
+msgstr "Rösta ned"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 371 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:57
+msgid "Vote Counted"
+msgstr "Rösten är räknad"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 372
+msgid "You've already voted for this comment"
+msgstr "Du har redan röstat på denna frågan"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 373 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:77
+msgid "Voting Error"
+msgstr "Röst fel"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 374
+msgid "You Must Be Logged In To Vote"
+msgstr "Du måste vara inloggad för att kunna rösta"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 375
+msgid "You cannot vote for your comment"
+msgstr "Du kan inte rösta på din egen fråga"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 376
+msgid "You are not allowed to vote for this comment"
+msgstr "Du får inte rösta på denna fråga"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 377 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:107
+msgid "Invalid Captcha Code"
+msgstr "Fel bildkod"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 378 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:117
+msgid "Some of field value is invalid"
+msgstr "Några av fälten är inte rätt"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 379
+msgid "Your Comment awaiting moderation"
+msgstr "Din fråga väntar på godkännande"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 380 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:141
+msgid "Sorry, the comment was not updated"
+msgstr "Ledsen, denna kommentaren uppdaterades inte"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 381 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:151
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "Ledsen, det går inte längre att ändra i denna kommentaren"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 382
+msgid "You've not made any changes"
+msgstr "Du har inte gjort några ändringar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 383 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-form.php:71
+msgid "Notify of new replies to this comment"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 386
+msgid "Confirm Subscription"
+msgstr "Bekräfta prenumerationen"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 387 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-email.php:59 ../../plugins/woodiscuz-woocommerce-
+#: comments/options/phrases-layouts/phrases-email.php:63 ../../plugins/woodiscuz-
+#: woocommerce-comments/options/phrases-layouts/phrases-email.php:63
+msgid "Ignore Subscription"
+msgstr "Ignorera prenumerationen"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 388 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-notification.php:168
+msgid "You've successfully unsubscribed."
+msgstr "Din prenumeration är nu avslutad."
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 389 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-email.php:80 ../../plugins/woodiscuz-woocommerce-
+#: comments/options/phrases-layouts/phrases-email.php:84
+msgid "You've successfully confirmed your subscription."
+msgstr "Du har nu bekräftat din prenumeration."
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/wpc-options-serialize.php:
+#: 390 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-email.php:48 ../../plugins/woodiscuz-woocommerce-
+#: comments/options/phrases-layouts/phrases-email.php:52
+msgid "Unsubscribe"
+msgstr "Avsluta prenumeration"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:2
+msgid "Date/Time Phrases"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:7
+msgid "Year"
+msgstr "År"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:18
+msgid "Years (Plural Form)"
+msgstr "År"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:22
+msgid "Years"
+msgstr "År"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:29
+msgid "Month"
+msgstr "Månad"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:40
+msgid "Months (Plural Form)"
+msgstr "Månader"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:51
+msgid "Day"
+msgstr "Dag"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "Dagar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:73 ../../plugins/woodiscuz-woocommerce-comments/options/options-
+#: layouts/settings-general.php:126
+msgid "Hour"
+msgstr "Timme"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:84
+msgid "Hours (Plural Form)"
+msgstr "Timmar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:95
+msgid "Minute"
+msgstr "Minut"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:106
+msgid "Minutes (Plural Form)"
+msgstr "Minuter"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:117
+msgid "Second"
+msgstr "Sekund"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:128
+msgid "Seconds (Plural Form)"
+msgstr "Sekunder"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:139
+msgid "Plural (Ex. user -> user + s)"
+msgstr "PLural"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:150
+msgid "Commented \"right now\" text"
+msgstr "Kommenterad \"just nu\" text"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:161
+msgid "Ago text"
+msgstr "Sedan text"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: datetime.php:172
+msgid "\"Today\" text"
+msgstr "\"Idag\" text"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:2
+msgid "Email Template Phrases"
+msgstr "E-post mall fraser"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:7
+msgid "Email Subject"
+msgstr "E-post ämne"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:17
+msgid "Email Message"
+msgstr "E-post meddelande"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:27
+msgid "Request for reply on purchased product [\"subject\"]"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:37
+msgid "Request for reply on purchased product [\"message\"]"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:70 ../../plugins/woodiscuz-woocommerce-comments/options/phrases-
+#: layouts/phrases-email.php:74 ../../plugins/woodiscuz-woocommerce-
+#: comments/options/phrases-layouts/phrases-email.php:74
+msgid "Confirm your subscription"
+msgstr "Bekräfta din prenumeration"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:90
+msgid "Subscribe Confirmation Email Subject"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:101
+msgid "Subscribe Confirmation Email Content"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:111
+msgid "New Reply Subject"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: email.php:122
+msgid "New Reply Message"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:2
+msgid "Comment Template Phrases"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:107
+msgid "Title For Guests"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:117
+msgid "Title For Members"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:127
+msgid "Title For Customers"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:137
+msgid "Title For Support"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:167
+msgid "Save edited comment button text"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: comment.php:177
+msgid "Cancel comment editing button text"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: general.php:2
+msgid "General Phrases"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: general.php:7
+msgid "Disscussion Tab Title"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: general.php:17
+msgid "Header"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: general.php:27
+msgid "Load More Button"
+msgstr "Visa fler knapp"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:2
+msgid "Form Template Phrases"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:7
+msgid "Comment Field Start"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:17
+msgid "Comment Field Join"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:27
+msgid "Email Field"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:37
+msgid "Name Field"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:47
+msgid "CAPTCHA Field"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:57
+msgid "Submit Button"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: form.php:67
+msgid "Notify on new replies (checkbox)"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:2
+msgid "Notification Phrases"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:7
+msgid "Error message for empty field"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:17
+msgid "Error message for invalid email field"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:37
+msgid "Logged In"
+msgstr "Inloggad"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:47
+msgid "To post a comment"
+msgstr "För att ställa en fråga"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:67
+msgid "You can vote only 1 time"
+msgstr "Du kan bara rösta en gång"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:87
+msgid "Login To Vote"
+msgstr "Logga in för att rösta"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:97
+msgid "You Cannot Vote On Your Comment"
+msgstr "Du kan inte rösta på din egen fråga"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:127
+msgid "Comment waiting moderation"
+msgstr "Frågan väntar på godkännande"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:137
+msgid "Message if comment was not updated"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:147
+msgid "Message if comment no longer possible to edit"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:158
+msgid "Message if comment text not changed"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/phrases-layouts/phrases-
+#: notification.php:162
+msgid "TYou've not made any changes"
+msgstr "Du har inte gjort några förändringar"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: style.php:7
+msgid "Comment text size in pixels"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: style.php:24
+msgid "Comment Form Background Color"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: style.php:27 ../../plugins/woodiscuz-woocommerce-comments/options/options-
+#: layouts/settings-style.php:51 ../../plugins/woodiscuz-woocommerce-
+#: comments/options/options-layouts/settings-style.php:75 ../../plugins/woodiscuz-
+#: woocommerce-comments/options/options-layouts/settings-style.php:99
+msgid "Example: #00ff00"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: style.php:48
+msgid "Comment Background Color"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: style.php:72
+msgid "Reply Background Color"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: style.php:96
+msgid "Comment Text Color"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:2
+msgid "General Settings"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:7
+msgid "Turn Off WooDiscuz Tab"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:17
+msgid "Set the Discussion Tab as the first opened Tab"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:27
+msgid "User Must be registered to comment"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:44
+msgid "Is name field required?"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:54
+msgid "Is email field required? "
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:64
+msgid ""
+"Keep comment threads private for product author and thread starter. <br/> "
+"This option will not allow users reply in other users' threads, however "
+"those will be readable for all."
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:74
+msgid "Usergroups for User Title \"Support\""
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:93
+msgid "Comment Threads Per Page"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:103
+msgid "Comments max depth"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:108
+msgid "Level"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:109 ../../plugins/woodiscuz-woocommerce-comments/options/options-
+#: layouts/settings-general.php:110 ../../plugins/woodiscuz-woocommerce-
+#: comments/options/options-layouts/settings-general.php:111 ../..
+#: /plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:112
+msgid "Levels"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:118
+msgid "Allow comment editing for"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:123
+msgid "Not Allow"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:124 ../../plugins/woodiscuz-woocommerce-comments/options/options-
+#: layouts/settings-general.php:125
+msgid "Minutes"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:127 ../../plugins/woodiscuz-woocommerce-comments/options/options-
+#: layouts/settings-general.php:128
+msgid "Hours"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:134
+msgid "Redirect first commenter to"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:141
+msgid "Do not redirect"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:149
+msgid "Allow guests to vote on comments"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:159
+msgid "Use WordPress Date/Time format"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:160
+msgid ""
+"WooDiscuz shows Human Readable date format. If you check this option it'll "
+"show the date/time format set in WordPress General Settings."
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:170
+msgid "Show the latest comments on"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:174
+msgid "the top of the list"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:176
+msgid "top of the threads"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:178
+msgid "bottom of the threads"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:180
+msgid "the bottom of the list"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:187
+msgid "Use Plugin .PO/.MO files"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:188
+msgid ""
+"WooDiscuz phrase system allows you to translate all front-end phrases. "
+"However if you have a multi-language website it'll not allow you to add more "
+"than one language translation. The only way to get it is the plugin "
+"translation files (.PO / .MO). If WooDiscuz has the languages you need you "
+"should check this option to disable phrase system and it'll automatically "
+"translate all phrases based on language files according to current language."
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:199
+msgid ""
+"Help Woodiscuz to grow allowing people to recognize which comment plugin you "
+"use"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:201
+msgid ""
+"Please check this option on to help Woodiscuz get more popularity as your "
+"thank to the hard work we do for you totally free. This option adds a very "
+"small (16x16px) icon under the comment section which will allow your site "
+"visitors recognize the name of comment solution you use."
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: general.php:206
+msgid "Thank you!"
+msgstr "Tack!"
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: subscription.php:2
+msgid "Email Subscription Settings"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: subscription.php:7
+msgid "Notify post author on new comment"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: subscription.php:17
+msgid "Notify comment author on new reply"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: subscription.php:27
+msgid "Requesting for comment on purchased product"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:7
+msgid "Hide WooCommerce Review Tab"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:17
+msgid "Hide Voting buttons"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:27
+msgid "Hide Share Button"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:37
+msgid "Hide the  CAPTCHA field"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:47
+msgid "Hide Reply button for Guests"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:57
+msgid "Hide Reply button for Customers"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:67
+msgid "Hide Author Titles"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/options/options-layouts/settings-
+#: show-hide.php:77
+msgid "Hide Subscription"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/widget-woocommerce-
+#: reviews.php:11
+msgid "This Widget displays woocommerce recent reviews"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/widget-woocommerce-
+#: reviews.php:14 ../../plugins/woodiscuz-woocommerce-comments/widgets/widget-
+#: woocommerce-reviews.php:69
+msgid "Woodiscuz Recent Reviews"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/widget-woodiscuz-comments.
+#: php:11
+msgid "This Widget displays woocommerce product comments"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/widget-woodiscuz-comments.
+#: php:15 ../../plugins/woodiscuz-woocommerce-comments/widgets/widget-woodiscuz-
+#: comments.php:71
+msgid "Woodiscuz Recent Comments"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/admin-form/form-woodiscuz-
+#: woocommerce-reviews.php:2 ../../plugins/woodiscuz-woocommerce-
+#: comments/widgets/admin-form/form-woodiscuz-product-comments.php:2
+msgid "Title:"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/admin-form/form-woodiscuz-
+#: woocommerce-reviews.php:10 ../../plugins/woodiscuz-woocommerce-
+#: comments/widgets/admin-form/form-woodiscuz-product-comments.php:10
+msgid "Number:"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/frontend-layout/layout-
+#: woodiscuz-product-comments.php:11
+#, php-format
+msgctxt "widgets"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: ../../plugins/woodiscuz-woocommerce-comments/widgets/frontend-layout/layout-
+#: woodiscuz-woocommerce-reviews.php:17
+#, php-format
+msgctxt "by comment author"
+msgid "by %1$s"
+msgstr ""

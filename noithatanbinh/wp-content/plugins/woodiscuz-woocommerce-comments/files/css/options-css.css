@@ -1,0 +1,11 @@
+/* ===== Options Form CSS ===== */
+
+.wpc-form tr:nth-child(even) {background: #fff}
+.wpc-form tr:nth-child(odd) {background: #fbfbfb}
+
+.form-table.wpc-form-table tr {background: transparent;}
+
+.woodiscuz_options_page .wpc-phrases-settings-form input[type="text"],
+.woodiscuz_options_page .wpc-phrases-settings-form textarea {
+    width: 300px;
+}

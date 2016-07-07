@@ -21,7 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
+<script src="<?php echo get_stylesheet_directory_uri()?>/js/img-zoom/jquery-1.8.3.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri()?>/js/img-zoom/jquery.elevateZoom-3.0.8.min.js"></script>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.

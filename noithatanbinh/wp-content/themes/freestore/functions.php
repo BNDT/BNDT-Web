@@ -372,7 +372,7 @@ class Footer_Form_Widget extends WP_Widget
     }
     function form($instance){
         parent::form($instance);
-        $default = array('icon' => 'Url icon của bạn',
+        $default = array(
                          'sdt'=> 'Hãy Nhập Số Điện Thoại',
 						 'facebook' => 'Nhập url Facebook',
 						 'google' => 'Nhập url Google Plus',
@@ -380,14 +380,12 @@ class Footer_Form_Widget extends WP_Widget
 						 'youtube' => 'Nhập url Youtube'
                         );
         $instance=wp_parse_args((array)$instance,$default);
-        $icon=$instance['icon'];
         $sdt=$instance['sdt'];
 		$facebook=$instance['facebook'];
 		$google=$instance['google'];
 		$twitter=$instance['twitter'];
 		$youtube=$instance['youtube'];
-         echo "<p><label>Url Icon Logo:</label> 
-		 <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('icon')."' value='".$icon."' /></p>";
+         
          echo "<p><label>Số Hotline:</label>
          <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('sdt')."' value='".$sdt."' /></p>";
 		 echo "<p><label>Url Facebook:</label>
@@ -403,7 +401,7 @@ class Footer_Form_Widget extends WP_Widget
 
     function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-        $instance['icon']=strip_tags($new_instance['icon']);
+        
         $instance['sdt']=$new_instance['sdt'];
 		$instance['facebook']=$new_instance['facebook'];
 		$instance['google']=$new_instance['google'];
@@ -414,8 +412,7 @@ class Footer_Form_Widget extends WP_Widget
     function widget( $args, $instance ) {
  
         extract( $args );
-        $icon = apply_filters( 'widget_icon', $instance['icon'] );
-        $icon=$instance['icon'];
+        $sdt = apply_filters( 'widget_sdt', $instance['sdt'] );
         $sdt = $instance['sdt'];
 		$facebook = $instance['facebook'];
 		$twitter = $instance['twitter'];
@@ -425,27 +422,77 @@ class Footer_Form_Widget extends WP_Widget
         // Nội dung trong widget
          echo " <div class='container'>
 					<div class='row top-footer'>
-						<div class='logo col-xs-2' style='float:left'>
+						<div class='logo-footer'>
 					<a href='#'>
-						<img src ='".get_stylesheet_directory_uri().$icon."' alt='Logo nội thất an bình'>
+						<img  src ='".get_stylesheet_directory_uri()."/images/an-binh-logo.png' alt='Logo nội thất an bình'>
 					</a>
 			</div>	
 			
 	<div class='col-xs-8' style='padding-top:1px'>
-		<span class='icon-hotline' background-color:#e3e3e3;padding-right:60px'>
+		<span class='icon-hotline' style='background-color:#e3e3e3;padding-right:60px'>
 			<em>Hotline : ".$sdt."</em>
 		</span>
 		
 		<div class='row' style='float:right'>
-					<a href='".$facebook."'> <img src ='wp-content/uploads/2016/07/icon-facebook45.png' alt='facebook nội thất an bình'></a>
-					<a href='".$google."'> <img src ='wp-content/uploads/2016/07/icon-google45.png' alt='google plus nội thất an bình'></a>
-					<a href='".$twitter."'> <img src ='wp-content/uploads/2016/07/icon-twitter45.png' alt='twitter nội thất an bình'></a>
-					<a href='".$youtube."'> <img src ='wp-content/uploads/2016/07/icon-youtube45.png' alt='youtube nội thất an bình'></a>
+					<a href='".$facebook."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-facebook45.png' alt='facebook nội thất an bình'></a>
+					<a href='".$google."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-google45.png' alt='google plus nội thất an bình'></a>
+					<a href='".$twitter."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-twitter45.png' alt='twitter nội thất an bình'></a>
+					<a href='".$youtube."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-youtube45.png' alt='youtube nội thất an bình'></a>
 		</div>			
 	</div>
 	</div>
 	</div>
 	";
+	echo '<div class="center-footer container">
+		<div class="cate-footer">
+              <ul class="row">';
+
+  $taxonomy     = 'product_cat';
+  $orderby      = 'name';  
+  $show_count   = 0;      // 1 for yes, 0 for no
+  $pad_counts   = 0;      // 1 for yes, 0 for no
+  $hierarchical = 1;      // 1 for yes, 0 for no  
+  $title        = '';  
+  $empty        = 0;
+
+  $args = array(
+         'taxonomy'     => $taxonomy,
+         'orderby'      => $orderby,
+         'show_count'   => $show_count,
+         'pad_counts'   => $pad_counts,
+         'hierarchical' => $hierarchical,
+         'title_li'     => $title,
+         'hide_empty'   => $empty
+  );
+ $all_categories = get_categories( $args );
+ foreach ($all_categories as $cat) {
+    if($cat->category_parent == 0) {
+        $category_id = $cat->term_id;       
+        echo '<li class="cate-main col-xs-3"><a href='. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a>';
+
+        $args2 = array(
+                'taxonomy'     => $taxonomy,
+                'child_of'     => 0,
+                'parent'       => $category_id,
+                'orderby'      => $orderby,
+                'show_count'   => $show_count,
+                'pad_counts'   => $pad_counts,
+                'hierarchical' => $hierarchical,
+                'title_li'     => $title,
+                'hide_empty'   => $empty
+        );
+        $sub_cats = get_categories( $args2 );
+		echo '<ul class="list-unstyled">';
+        if($sub_cats) {
+            foreach($sub_cats as $sub_category) {
+                echo '<li><a class="sub-cate" href="'.get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a></li>' ;
+            }   
+        }
+		echo '</ul></li>';
+    }       
+}
+              echo'</ul>
+			  </div></div>';
     }
 	
 }
@@ -465,22 +512,22 @@ class Bottom_Footer_Widget extends WP_Widget
         parent::__construct(
                'bottomfooter',
                'Bottom Footer' ,
-                array('description' => 'Bottom Footer Form')
+                array('description' => 'Forms Tạo Footer')
             );
     }
     function form($instance){
         parent::form($instance);
-        $default = array('icon' => 'Logo Nội thất An Bình',
-                         'value'=> 'Hãy Nhập Nội Dung'
-                        );
+        $default = array('title'=> 'Hãy Nhập Tên Công Ty',
+						 'diachi' => 'Nhập Địa Chỉ',
+						 'chinhanh' => 'Nhập Chi Nhánh',
+						 'truso' => 'Nhập Trụ sở',
+						 'hotline' => 'Nhập số hotline');
         $instance=wp_parse_args((array)$instance,$default);
-        $icon=esc_attr($instance['icon']);
         $title=$instance['title'];
 		$diachi=$instance['diachi'];
 		$chinhanh=$instance['chinhanh'];
 		$truso=$instance['truso'];
 		$hotline=$instance['hotline'];
-         echo "<p>Url Icon: <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('icon')."' value='".$icon."' /></p>";
          echo "<p><label>Tên Công Ty:</label>
          <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('title')."' value='".$title."' /></p>";
 		 echo "<p><label>Địa Chỉ:</label>
@@ -495,7 +542,6 @@ class Bottom_Footer_Widget extends WP_Widget
 
     function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-        $instance['icon']=strip_tags($new_instance['icon']);
         $instance['title']=$new_instance['title'];
 		$instance['diachi']=$new_instance['diachi'];
 		$instance['chinhanh']=$new_instance['chinhanh'];
@@ -506,8 +552,7 @@ class Bottom_Footer_Widget extends WP_Widget
     function widget( $args, $instance ) {
  
         extract( $args );
-        $icon = apply_filters( 'widget_icon', $instance['icon'] );
-        $icon=$instance['icon'];
+        $title = apply_filters( 'widget_title', $instance['title'] );
         $title = $instance['title'];
 		$diachi = $instance['diachi'];
 		$chinhanh = $instance['chinhanh'];
@@ -516,7 +561,7 @@ class Bottom_Footer_Widget extends WP_Widget
         echo " 
 	<div class='container'>
 		<div class='bottom-footer row'>
-			<div class='col-xs-1'><p><a href='#'><img src='".$icon."' alt='Nội thất an bình'></a></p></div>
+			<div class='col-xs-1'><p class='img-footer'><a href='#'><img src='".get_stylesheet_directory_uri()."/images/cropped-noithatanbinh-logo.jpg' alt='Nội thất an bình'></a></p></div>
 			<div class='col-xs-7'> 
 			<p><strong>".$title."</strong><br/>
 			ĐC GPKD : ".$diachi."<br/>

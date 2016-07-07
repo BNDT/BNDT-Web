@@ -46,11 +46,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			
 		<?php get_template_part( '/templates/titlebar' ); ?>
-
+		Giam gia
+		<?php echo do_shortcode('[sale_products per_page="12" columns="4" orderby="date" order="desc" ]') ?>
+		Moi
 		<?php echo do_shortcode('[recent_products per_page="12" columns="4"]'); ?>
-		
-			
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	
@@ -59,13 +58,12 @@ get_header(); ?>
         <?php if ( get_theme_mod( 'freestore-blog-full-width', false ) ) : ?>
             <!-- No Sidebar -->
         <?php else : ?>
-            <?php get_sidebar(); ?>
+            <?php //get_sidebar(); ?>
         <?php endif; ?>
         
     <?php else : ?>
-    <?php get_sidebar(); ?>
+    <?php //get_sidebar(); ?>
     <?php endif; ?>
     
     <div class="clearboth"></div>
-	
 <?php get_footer(); ?>

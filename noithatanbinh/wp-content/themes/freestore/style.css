@@ -2053,9 +2053,6 @@ font-family:FontAwesome
 }
 
 .top-footer{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-right: 60px;
 	margin-bottom: 5px;
 	margin-top:5px;
 	font-size: 30px;
@@ -2080,13 +2077,7 @@ font-family:FontAwesome
 	
 }
 
-.logo {
-	width: 200px;
-	height:45px;
-	padding-left:0;
-	margin-left:35px;
-	margin-right: 100px;
-}
+
 
 .cate-footer ul{
 	display:inline;
@@ -2096,30 +2087,40 @@ font-family:FontAwesome
 .cate-footer .cate-main{
 	float:left;
 	display: inline;
+	text-align:left;
 }
 .cate-footer .cate-main:nth-child(5n+5){
 	clear: both;
 }
 .cate-footer .cate-main a{
+	text-align:left;
 	color: #225599;
 	font-size: 0.9230769230769231em;
 }
 
-.cate-footer ul a.sub-cate{
+.cate-footer ul li a.sub-cate{
 	font-size: 0.8461538461538462em;
 	color: #666;
+	display:inline;
 }
-.cate-footer ul a.sub-cate:hover{
+.cate-footer ul li a.sub-cate:hover{
 	color: #EF532A;
 }
 
 .list-unstyled {
+	text-align:left;
 }
 
-.image-logo-footer
-{
+.img-footer{
+	width:140px;
+	height:72px;
+}
+
+.logo-footer{
+	width:20%;
 	background: red;
-    padding: 5px;
+	margin-right:40px;
+	float:left;
 }
 
 .savept-new{
@@ -2143,67 +2144,100 @@ margin-left: 3px;
 }
 
 /* Vinh */
-.row .col-xs-9 li{
-	list-style-type: none;
-	margin-left: 40px;
-	margin-top: 10px;
+.navbar  .widget{
+	margin:0;
 }
 
-.row .widget{
-	margin: 0;
-}
-.row .col-xs-9 li{
-width: none;
-}
 .header-nav{
 	background: #e96656;
-	padding: 10px;
+	padding: 0px 0 10px 0;
+	display: -webkit-inline-box;
 }
 .navbar-fixed-top{
 	position: relative;
 }
-.row .col-xs-9 input[type=search] {
+.navbar  input[type=search] {
 	font-size: 18px;
-	width: 400px; 
+	width: 75%; 
 }
-.row .col-xs-9 input[type=summit] {
+.navbar input[type=summit] {
 	padding: 9px;
 }
-
-
-@media(max-width: 768px){
-	.row .col-xs-9 form{
-		display: none;
-	}
-	.row{
-		float: left;
-		width: 100%;
-	}
-	.menu{
-		float: right;
-	}
-
+.navbar .logo{
+	width:250px ;
+	margin-top: 5px;
+	margin-left: 20px;
 }
-@media(min-width: 768px){
-	.container{
-		display: inline;
 
-	}
-	.row .col-xs-9 form{
-		margin-left: 50px;
-	}
-	.row .col-xs-9 input[type=search]{
-		width: 66.667%;
-	}
-	.menu{
-		display: none;
-	}
-	.col-xs-9{
-		width: 55% !important;
-	}
-}
 .cart{
 	background: #fff;
-	width: 12% !important;
+	width: 200px;
 	margin-top: 10px;
+	padding:5px 0 0 0 ;
+	text-align: center;
+	position: relative;
+	height: 40px;
+}
+.search_menu {
+  width: 40%;
+  margin-top: 10px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+}
+.search_menu:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'FontAwesome';
+  content: '\f002';
+  background: #8FC357;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smooth: always;
+}
+
+.searchTerm {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: 5px solid #8FC357;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.searchButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+@media (max-width: 720px){
+	.navbar .logo{
+	max-width:50px ;
+	margin-top: 10px;
+	margin-left: 10px;
+	}
+	.navbar .logo a{
+		content: url('images/an-binh-logoab.png');
+		max-width:60px ;
+		margin-top: 5px;
+	}
+	.search_menu{
+		margin-left: 30px;
+	}
+	
+
 }

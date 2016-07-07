@@ -22,6 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 ?>
+
+<script>
+	var images = jQuery(".images img");
+	for(i=0; i<images.length; i++){
+		images[i].elevateZoom();
+	}
+</script>
 <div class="images">
 	<?php
 		if ( has_post_thumbnail() ) {
@@ -34,9 +41,16 @@ global $post, $product;
 			) );
 			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $props['url'], $props['caption'], $image ), $post->ID );
 		} else {
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(),__( 'Placeholder', 'woocommerce' ) ), $post->ID );
 		}
 
 		do_action( 'woocommerce_product_thumbnails' );
 	?>
 </div>
+
+
+<script>
+	var images = jQuery(".images img");
+	images.elevateZoom();
+</script>
+
