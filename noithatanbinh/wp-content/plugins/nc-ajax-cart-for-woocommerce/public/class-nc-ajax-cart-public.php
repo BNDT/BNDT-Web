@@ -129,7 +129,7 @@ class NC_Ajax_Cart_Public {
 			}
 			else{
 				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">';
-				include_once('woocommerce/templates/cart/mini-cart.php') ;		
+					include_once('woocommerce/templates/cart/mini-cart.php') ;		
 				echo '</div>';
 			}
 		}

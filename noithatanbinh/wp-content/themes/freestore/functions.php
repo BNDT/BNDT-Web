@@ -636,3 +636,5 @@ function woocommerce_sale_products( $atts ){
 
 add_shortcode('sale_products', 'woocommerce_sale_products');
 // add vào : [sale_products per_page="12" columns="4" orderby="date" order="desc" ]
+
+include("myfunction/yoast_seo.php");

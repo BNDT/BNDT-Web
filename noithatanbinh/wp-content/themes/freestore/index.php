@@ -38,20 +38,49 @@ get_header(); ?>
 	<!-- End Right -->
 	</div>
 	<?php if ( is_home() ) : ?>
-	<div id="primary" class="content-area <?php echo ( get_theme_mod( 'freestore-blog-full-width', false ) ) ? sanitize_html_class( ' content-area-full' ) : ''; ?>">
+	<div id="primary" class="content-area <?php echo ( get_theme_mod( 'freestore-blog-full-width', false ) ) ? sanitize_html_class( ' content-area-full' ) : ''; ?> col-xs-12" style="width:100%">
     <?php else : ?>
-    <div id="primary" class="content-area">
+    <div id="primary" class="content-area" >
     <?php endif; ?>
 		
-		<main id="main" class="site-main" role="main">
+	<!--<main id="main" class="container" role="main">-->
+		<div class="row">
+			<div class="box">
+				<div class="title-bar col-xs-12">
+					<span class="bar-header">Sản Phẩm Đang Giảm Giá</span>
+					<ul class="bar bar-item">
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+					</ul>
 			
-		<?php get_template_part( '/templates/titlebar' ); ?>
-		Giam gia
-		<?php echo do_shortcode('[sale_products per_page="12" columns="4" orderby="date" order="desc" ]') ?>
-		Moi
-		<?php echo do_shortcode('[recent_products per_page="12" columns="4"]'); ?>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				</div>    
+		
+				<div class="con-product">
+					<?php echo do_shortcode('[sale_products per_page="12" columns="4" orderby="date" order="desc" ]');?>
+				</div> 
+		
+				<div class="title-bar col-xs-12">
+					<span class="bar-header">Sản Phẩm Mới Nhất</span>
+					<ul class="bar bar-item">
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+						<li><a href="">Tab1</a></li>
+					</ul>
+				</div>   
+				<div class="con-product">
+					<?php echo do_shortcode('[recent_products per_page="12" columns="4"]'); ?>
+				</div>
+			</div>
+		</div>
+	</div><!-- #main -->
+	<!--</main><!-- #primary -->
 	
 	<?php if ( is_home() ) : ?>
     
