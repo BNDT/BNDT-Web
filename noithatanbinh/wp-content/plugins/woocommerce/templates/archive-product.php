@@ -21,7 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
+<div style="margin-bottom: 10px;
+    display: inline-flex;
+    background: rgba(41, 0, 255, 0.09);
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;">
+<?php shailan_dropdown_menu(); ?>
+<?php if ( function_exists('yoast_breadcrumb') )
+{yoast_breadcrumb('','');}
+?></div>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.

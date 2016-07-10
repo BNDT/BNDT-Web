@@ -21,7 +21,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<script src="<?php echo get_stylesheet_directory_uri()?>/js/img-zoom/jquery-1.8.3.min.js"></script>
+<div style="margin-bottom: 10px;
+    display: inline-flex;
+    background: rgba(41, 0, 255, 0.09);
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;">
+<?php shailan_dropdown_menu(); ?>
+<?php if ( function_exists('yoast_breadcrumb') )
+{yoast_breadcrumb('','');}
+?></div>
+<!-- Zoom Image -->
 <script src="<?php echo get_stylesheet_directory_uri()?>/js/img-zoom/jquery.elevateZoom-3.0.8.min.js"></script>
 	<?php
 		/**

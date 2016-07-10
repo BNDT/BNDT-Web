@@ -27,6 +27,7 @@ if ( empty( $product ) || ! $product->exists() ) {
 }
 
 if ( ! $related = $product->get_related( $posts_per_page ) ) {
+	echo '<h3> Không có sản phẩm liên quan </h3>';
 	return;
 }
 
@@ -46,9 +47,9 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="related products">
+	<div class="container" style="margin-left:-32px">
 
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+		<h3><?php echo 'Sản Phẩm Liên Quan'; ?></h3>
 
 		<?php woocommerce_product_loop_start(); ?>
 
@@ -61,7 +62,7 @@ if ( $products->have_posts() ) : ?>
 		<?php woocommerce_product_loop_end(); ?>
 
 	</div>
-
+<?php else : echo 'Không có sản phẩm liên quan';?>
 <?php endif;
 
 wp_reset_postdata();

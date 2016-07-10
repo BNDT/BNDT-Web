@@ -1982,21 +1982,25 @@ body.freestore-page-styling-raised.woocommerce-page #container {
 	background-color: #FBFBFB;
 }
 
-.menu-right {
+.my-menu-right {
     display: none;
 }
-@media (min-width: 1200px){
-.menu-right {
-    display: block;
+
+@media (min-width: 1000px){
+.my-menu-right {
+    display: block !important;
 	float: left;
     right: 0;
     width: 250px;
     height: 378px;
     position: absolute;
     background: #fff;
+	margin-top: -20px;
 }}
 
-@media (min-width: 1200px){
+
+
+@media (min-width: 1000px){
 .right__block__item {
     position: relative;
     line-height: 1.1em;
@@ -2005,7 +2009,7 @@ body.freestore-page-styling-raised.woocommerce-page #container {
     color: #6e686e;
 }}
 
-@media (min-width: 1200px){
+@media (min-width: 1000px){
 .right__block__title {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2019,14 +2023,14 @@ body.freestore-page-styling-raised.woocommerce-page #container {
     font-weight: bold;
 }}
 
-@media (min-width: 1200px){
+@media (min-width: 1000px){
 .right__block__wrapper {
     padding: 10px;
     border-left: 4px solid #E8E8E8;
     height: 338px;
 }}
 
-@media (min-width: 1200px){
+@media (min-width: 1000px){
 .right__block__item i {
     padding: 4px;
     border: 1px solid #6E686E;
@@ -2245,6 +2249,28 @@ margin-left: 3px;
 	box-shadow: none;
 }
 
+.woocommerce-ordering {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.015);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: block;
+    width: 50%;
+    text-align: right;
+    margin: 10px 0 30px;
+    padding: 10px 0;
+    float: right;
+}
+.woocommerce-ordering select {
+    background: white;
+    border-radius: 1px;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+    padding: 6px;
+    font-weight: 600;
+    color: rgb(89, 89, 89);
+}
+
 /* Vinh */
 .navbar  .widget{
 	margin:0;
@@ -2271,9 +2297,8 @@ margin-left: 3px;
 	margin-left: 20px;
 }
 
-.cart{
+.navbar .cart{
 	background: #fff;
-	width: 200px;
 	margin-top: 10px;
 	padding:5px 0 0 0 ;
 	text-align: center;
@@ -2326,6 +2351,10 @@ margin-left: 3px;
   opacity: 0;
   cursor: pointer;
 }
+.danhmuc{
+	margin-left: 10px;
+}
+
 @media (max-width: 720px){
 	.navbar .logo{
 	max-width:50px ;
@@ -2339,7 +2368,76 @@ margin-left: 3px;
 	}
 	.search_menu{
 		margin-left: 30px;
+		display: none;
 	}
-	
+	.search_menu_768px{
+ 	width: 90%;
+    margin-left: 5%;
+    display: block;
+}
+.slider-image{
+	margin-top: -70px !important;
+}
+.menu-search-id{
+	height: 30px;
+	margin-top: 30px;
 
+}
+.menu-search-id{
+	margin-bottom: 10px;
+	display: block !important;
+}
+.navbar .cart{
+	position: absolute;
+	right: 5px;
+
+}
+
+}
+.menu-search-id{
+	display: none;
+    z-index: 51;
+    top: 2px;
+}
+
+.icon-cart-item{
+	text-align: center;
+    background: #ff1616;
+    color: #fff;
+    position: absolute;
+    margin-left: -18px;
+    padding: 0 4px 0 4px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-top: -3px;
+}
+
+}
+.cart a{
+	display: inline-flex;
+}
+@media (min-width: 720px){
+.danhmuc{
+	display:  none;
+	height: 50px;
+}
+}
+@media (max-width: 400px){
+.navbar .logo a{
+	display:  none;
+}
+.slider-image{
+	
+	width: 100%;
+}
+}
+.danhmuc{
+	height: 50px;
+}
+.slider-image{
+	margin-top:-20px;
+	margin-bottom: 80px;
+	display:inline-block;
+	width: 100%;
+	float: left;
 }

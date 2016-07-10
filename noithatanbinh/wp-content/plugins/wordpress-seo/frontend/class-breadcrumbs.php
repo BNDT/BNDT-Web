@@ -625,8 +625,10 @@ class WPSEO_Breadcrumbs {
 		if ( ! is_array( $this->crumbs ) || $this->crumbs === array() ) {
 			return;
 		}
-
+		$abc=0;
 		foreach ( $this->crumbs as $i => $crumb ) {
+			$abc++;
+			if($abc==2)continue;
 			$link_info = $crumb; // Keep pre-set url/text combis.
 
 			if ( isset( $crumb['id'] ) ) {
@@ -813,7 +815,8 @@ class WPSEO_Breadcrumbs {
 	 */
 	private function wrap_breadcrumb() {
 		if ( is_string( $this->output ) && $this->output !== '' ) {
-			$output = '<' . $this->wrapper . $this->get_output_id() . $this->get_output_class() . ' xmlns:v="http://rdf.data-vocabulary.org/#">' . $this->output . '</' . $this->wrapper . '>';
+			$output = '<' . $this->wrapper . $this->get_output_id() . $this->get_output_class() . ' style="    padding-top: 10px;
+    padding-left: 10px;" xmlns:v="http://rdf.data-vocabulary.org/#">' . $this->output . '</' . $this->wrapper . '>';
 
 			/**
 			 * Filter: 'wpseo_breadcrumb_output' - Allow changing the HTML output of the Yoast SEO breadcrumbs class

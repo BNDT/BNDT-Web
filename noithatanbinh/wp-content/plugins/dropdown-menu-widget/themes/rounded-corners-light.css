@@ -13,7 +13,7 @@ ul.dropdown li { }
 ul.dropdown ul li { }
 ul.dropdown-vertical>li{ }
 ul.dropdown-horizontal.dropdown-align-left>li {  }
-ul.dropdown-horizontal.dropdown-align-left>li:last-child {  }
+ul.dropdown-horizontal.dropdown-align-left>li:last-child { width: 100%; }
 ul.dropdown-horizontal.dropdown-align-right>li {  }
 ul.dropdown-horizontal.dropdown-align-right>li:first-child { }
 

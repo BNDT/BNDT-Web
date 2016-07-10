@@ -352,6 +352,31 @@ register_sidebar(array(
 }
 add_action('widgets_init','Cart_Widget');
 
+/*Hiep -- sitebar-product*/
+
+add_action('widgets_init','relative_product');
+function Relative_Product(){
+    register_widget('Relative_Product_Widget');
+}
+
+class Relative_Product_Widget extends WP_Widget
+{
+    
+    
+    function __construct()
+    {
+        # code...
+        parent::__construct(
+               'relativeproduct',
+               'Sản Phẩm Liên Quan'
+            );
+    }
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+		echo do_shortcode('[related_products per_page="3" columns="1"]');
+    }
+}
 /*Hiệp -- footer widget*/
 
 add_action('widgets_init','Footer_Form');
@@ -430,7 +455,7 @@ class Footer_Form_Widget extends WP_Widget
 			
 	<div class='col-xs-8' style='padding-top:1px'>
 		<span class='icon-hotline' style='background-color:#e3e3e3;padding-right:60px'>
-			<em>Hotline : ".$sdt."</em>
+			<a href='tel:+84".$sdt."'><em>Hotline : ".$sdt."</em></a>
 		</span>
 		
 		<div class='row' style='float:right'>
@@ -468,7 +493,7 @@ class Footer_Form_Widget extends WP_Widget
  foreach ($all_categories as $cat) {
     if($cat->category_parent == 0) {
         $category_id = $cat->term_id;       
-        echo '<li class="cate-main col-xs-3"><a href='. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a>';
+        echo '<li class="cate-main col-xs-3"><a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a>';
 
         $args2 = array(
                 'taxonomy'     => $taxonomy,
@@ -638,3 +663,21 @@ add_shortcode('sale_products', 'woocommerce_sale_products');
 // add vào : [sale_products per_page="12" columns="4" orderby="date" order="desc" ]
 
 include("myfunction/yoast_seo.php");
+
+/**
+ * Change text strings
+ *
+ * @link http://codex.wordpress.org/Plugin_API/Filter_Reference/gettext
+ */
+function my_text_strings( $translated_text, $text, $domain ) {
+    switch ( $translated_text ) {
+        case 'View Cart' :
+            $translated_text = __( 'View Shopping Cart', 'woocommerce' );
+            break;
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'my_text_strings', 20, 3 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+

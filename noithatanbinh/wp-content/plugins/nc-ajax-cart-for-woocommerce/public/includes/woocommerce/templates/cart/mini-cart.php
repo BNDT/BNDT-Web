@@ -83,7 +83,7 @@ $nc_ajax_cart_settings=get_option('nc_ajax_cart_settings');
     </table>
 	<?php else : ?>
 
-		<div class="empty"><?php _e( 'No products in the cart.', 'nc-ajax-cart-for-woocommerce' ); ?></div>
+		<div class="empty"><?php _e( 'Chưa có sản phẩm nào.', 'nc-ajax-cart-for-woocommerce' ); ?></div>
 
 	<?php endif; ?>
 
@@ -96,8 +96,8 @@ $nc_ajax_cart_settings=get_option('nc_ajax_cart_settings');
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 <div  class="woocommerce">
 	<ul>
-		<li><a href="<?php echo WC()->cart->get_cart_url(); ?>" class="button wc-forward"><?php _e( 'View Cart', 'nc-ajax-cart-for-woocommerce' ); ?></a>
-        <a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="button checkout wc-forward"><?php _e( 'Checkout', 'nc-ajax-cart-for-woocommerce' ); ?></a></li>
+		<li><a href="<?php echo WC()->cart->get_cart_url(); ?>" class="button wc-forward"><?php _e( 'Xem Giỏ Hàng', 'nc-ajax-cart-for-woocommerce' ); ?></a>
+        <a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="button checkout wc-forward"><?php _e( 'Đặt Hàng', 'nc-ajax-cart-for-woocommerce' ); ?></a></li>
 	</ul>
 </div>
 <?php endif; ?>
