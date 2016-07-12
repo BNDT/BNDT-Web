@@ -399,28 +399,12 @@ class Footer_Form_Widget extends WP_Widget
         parent::form($instance);
         $default = array(
                          'sdt'=> 'Hãy Nhập Số Điện Thoại',
-						 'facebook' => 'Nhập url Facebook',
-						 'google' => 'Nhập url Google Plus',
-						 'twitter' => 'Nhập url Twitter',
-						 'youtube' => 'Nhập url Youtube'
-                        );
+						 );
         $instance=wp_parse_args((array)$instance,$default);
         $sdt=$instance['sdt'];
-		$facebook=$instance['facebook'];
-		$google=$instance['google'];
-		$twitter=$instance['twitter'];
-		$youtube=$instance['youtube'];
-         
+		 
          echo "<p><label>Số Hotline:</label>
          <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('sdt')."' value='".$sdt."' /></p>";
-		 echo "<p><label>Url Facebook:</label>
-         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('facebook')."' value='".$facebook."' /></p>";
-		 echo "<p><label>Url Google:</label>
-         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('twitter')."' value='".$twitter."' /></p>";
-		 echo "<p><label>Url Twitter:</label>
-         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('google')."' value='".$google."' /></p>";
-		 echo "<p><label>Url Youtube:</label>
-         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('youtube')."' value='".$youtube."' /></p>";
 		 //<textarea class='widefat' rows='10' cols='20' name='".$this->get_field_name('value')."' id='".$this->get_field_id('value ')."'>".$value."</textarea></p>";
     }
 
@@ -428,22 +412,14 @@ class Footer_Form_Widget extends WP_Widget
         $instance = $old_instance;
         
         $instance['sdt']=$new_instance['sdt'];
-		$instance['facebook']=$new_instance['facebook'];
-		$instance['google']=$new_instance['google'];
-		$instance['twitter']=$new_instance['twitter'];
-		$instance['youtube']=$new_instance['youtube'];
-       return $instance;
+		return $instance;
     }
     function widget( $args, $instance ) {
  
         extract( $args );
         $sdt = apply_filters( 'widget_sdt', $instance['sdt'] );
         $sdt = $instance['sdt'];
-		$facebook = $instance['facebook'];
-		$twitter = $instance['twitter'];
-		$google = $instance['google'];
-		$youtube = $instance['youtube'];
-        //In widget
+		//In widget
         // Nội dung trong widget
          echo " <div class='container'>
 					<div class='row top-footer'>
@@ -453,18 +429,15 @@ class Footer_Form_Widget extends WP_Widget
 					</a>
 			</div>	
 			
-	<div class='col-xs-8' style='padding-top:1px'>
-		<span class='icon-hotline' style='background-color:#e3e3e3;padding-right:60px'>
+	<div class='col-xs-4' style='margin-top:15px'>
+		<span class='icon-hotline hot-line'>
 			<a href='tel:+84".$sdt."'><em>Hotline : ".$sdt."</em></a>
 		</span>
-		
-		<div class='row' style='float:right'>
-					<a href='".$facebook."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-facebook45.png' alt='facebook nội thất an bình'></a>
-					<a href='".$google."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-google45.png' alt='google plus nội thất an bình'></a>
-					<a href='".$twitter."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-twitter45.png' alt='twitter nội thất an bình'></a>
-					<a href='".$youtube."'> <img src ='".get_stylesheet_directory_uri()."/images/icon-youtube45.png' alt='youtube nội thất an bình'></a>
-		</div>			
 	</div>
+	<div class='col-xs-4' style='float:right;margin-right:-1%'>
+		<div class='fb-page' data-href='https://www.facebook.com/sieuthinoithatanbinh/?fref=ts' data-tabs='' data-width='270' data-height='70' data-small-header='true' data-adapt-container-width='false' data-hide-cover='false' data-show-facepile='false' data-share='true'><blockquote class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/sieuthinoithatanbinh/?fref=ts'>Nội thất An Bình</a></blockquote>
+		</div>
+	</div>			
 	</div>
 	</div>
 	";
@@ -586,14 +559,11 @@ class Bottom_Footer_Widget extends WP_Widget
         echo " 
 	<div class='container'>
 		<div class='bottom-footer row'>
-			<div class='col-xs-1'><p class='img-footer'><a href='#'><img src='".get_stylesheet_directory_uri()."/images/cropped-noithatanbinh-logo.jpg' alt='Nội thất an bình'></a></p></div>
-			<div class='col-xs-7'> 
 			<p><strong>".$title."</strong><br/>
 			ĐC GPKD : ".$diachi."<br/>
 			Trụ sở : ".$truso."<br/>
 			Chi nhánh : ".$chinhanh."<br/>
 			Hotline : ".$hotline."</p>
-			</div>
 		</div>
 	</div>	
             ";

@@ -18,7 +18,7 @@ get_header(); ?>
 					</ul>
 				</div>    
 				<div class="con-product">
-					<?php echo do_shortcode('[recent_products per_page="12" columns="4"]'); ?>
+					<?php echo do_shortcode('[recent_products per_page="30" columns="4"]'); ?>
 				</div>
 			</div>
 		</div>

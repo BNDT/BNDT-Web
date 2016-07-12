@@ -114,21 +114,27 @@ class NC_Ajax_Cart_Public {
 		global $woocommerce;  
 		$settings=$this->ajax_cart_settings;
 		$font=!empty($settings['ajax_cart_icon_font']) ? $settings['ajax_cart_icon_font'] : 'a';
+		$singular=!empty($settings['ajax_cart_item_name']) ? $settings['ajax_cart_item_name'] : 'Item';
+		$plural=!empty($settings['ajax_cart_item_name_plural']) ? $settings['ajax_cart_item_name_plural'] : 'Items';
 		$item_count=WC()->cart->cart_contents_count;
 		?>
 		<a id="nc_ajax_cart_snippet" href="javascript:void(0)">
 			<span class="nc_ajax_cart_icon_font"><?php  echo $font; ?></span>
-			<span class='icon-cart-item'><?php echo sprintf ( $item_count); ?></span>
-			<span>Giỏ Hàng</span>
-			</a>
+			<span class="icon-cart-item">
+			<?php echo //sprintf (_n( '%d '.$singular, '%d '.$plural,$item_count,$this->plugin_name),$item_count); 
+						$item_count;
+			?>
+			</span>
+			<span>Giỏ hàng</span>
+			<?php ?></a>
 			<?php
 			if ($item_count == 0 ) {
 
-				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">Chưa có sản phẩm nào::</div>';
+				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">Chưa có sản phẩm trong giỏ hàng!</div>';
 			}
 			else{
 				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">';
-					include_once('woocommerce/templates/cart/mini-cart.php') ;		
+				include_once('includes/woocommerce/templates/cart/mini-cart.php') ;		
 				echo '</div>';
 			}
 		}
@@ -192,20 +198,26 @@ class NC_Ajax_Cart_Public {
 		global $woocommerce;
 		$settings=$this->ajax_cart_settings;
 		$font=!empty($settings['ajax_cart_icon_font']) ? $settings['ajax_cart_icon_font'] : 'a';
+		$singular=!empty($settings['ajax_cart_item_name']) ? $settings['ajax_cart_item_name'] : 'Item';
+		$plural=!empty($settings['ajax_cart_item_name_plural']) ? $settings['ajax_cart_item_name_plural'] : 'Items';
 		$item_count=WC()->cart->cart_contents_count;
 		ob_start();
 		?>
 		<a id="nc_ajax_cart_snippet" href="javascript:void(0)">
 			<span class="nc_ajax_cart_icon_font"><?php  echo $font; ?></span>
-			<span class='icon-cart-item'><?php echo sprintf ( $item_count); ?> </span>
-			<span>Giỏ Hàng</span>
-			</a>
+			<span class="icon-cart-item">
+			<?php echo //sprintf (_n( '%d '.$singular, '%d '.$plural,$item_count,$this->plugin_name),$item_count); 
+						$item_count;
+			?>
+			</span>
+			<span>Giỏ hàng</span>
+			<?php  ?></a>
 			<?php
 
 			$fragments['a#nc_ajax_cart_snippet'] = ob_get_clean(); 
 			if ( WC()->cart->get_cart_contents_count() == 0 ) {
 
-				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">Chưa có sản phẩm nào::</div>';
+				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">Chưa có sản phẩm trong giỏ hàng!</div>';
 			}
 			else{
 				echo '<div id="nc_ajax_cart_mini_cart" style="display:none">';

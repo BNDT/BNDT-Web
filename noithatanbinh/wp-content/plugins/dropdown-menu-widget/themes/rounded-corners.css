@@ -22,13 +22,13 @@ ul.dropdown-align-right li{ }
 
 ul.dropdown li a {
 	padding: 5px 15px;
+
 	line-height: 22px;
-	background:rgba(0, 0, 0, 0.79);
 	font-size:16px; 
 }
 /** Link colors */
 ul.dropdown a, ul.dropdown a:link, ul.dropdown a:visited { color: #fff; text-decoration: none; display:block;}
-ul.dropdown a:hover	{ color: #444; }
+ul.dropdown a:hover	{ color: #FFF!important; background-color: #D21123!important;}
 
 /** Sub menus */
 ul.dropdown ul { }

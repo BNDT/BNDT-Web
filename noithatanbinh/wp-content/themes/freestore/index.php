@@ -12,8 +12,17 @@
  */
 
 get_header(); ?>
+
+	
 	<!-- Start Slider -->
+	<div class='container' >
+	<div class='menu-sanpham' style="">
+	<h3>Danh Mục Sản Phẩm</h3>
+	
+	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	</div>
 	<div class='slider-image' >
+	
 	<span >
 	<?php masterslider(1); ?>
 	</span>
@@ -35,6 +44,7 @@ get_header(); ?>
         </div>
       </div>
     </span>
+    </div>
 	<!-- End Right -->
 	<?php if ( is_home() ) : ?>
 	<div id="primary" class="content-area <?php echo ( get_theme_mod( 'freestore-blog-full-width', false ) ) ? sanitize_html_class( ' content-area-full' ) : ''; ?> col-xs-12" style="width:100%">
@@ -109,5 +119,5 @@ get_header(); ?>
     <?php //get_sidebar(); ?>
     <?php endif; ?>
     
-    <div class="clearboth"></div>
 <?php get_footer(); ?>
+    <div class="clearboth"></div>

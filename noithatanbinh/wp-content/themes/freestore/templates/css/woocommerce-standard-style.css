@@ -75,7 +75,7 @@
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
     width: 24%;
-    margin: 0 0.5% 13px;
+    margin: 0 0.5% 38px;
     padding: 0 0 20px;
     text-align: center;
     float: left;
@@ -319,7 +319,8 @@
 .woocommerce .quantity,
 .woocommerce-page #content .quantity,
 .woocommerce-page .quantity {
-    width: 120px;
+    /* Tin change
+	width: 120px; */
     float: left;
 }
 .woocommerce #content .quantity input.qty,

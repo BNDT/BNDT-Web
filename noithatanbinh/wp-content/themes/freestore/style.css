@@ -996,6 +996,7 @@ h1.entry-title {
 	margin: 0 auto;
 	padding: 0 30px;
 	position: relative;
+	top: 65px;
 }
 
 .freestore-no-meta-slider {
@@ -1911,7 +1912,7 @@ input[type="submit"],
 .main-navigation button,
 .wpcf7-submit {
     background: inherit;
-    background-color: #29a6e5;
+    background-color: #ff0000;
 }
 
 .content-area .entry-content a,
@@ -1971,7 +1972,7 @@ input[type="submit"],
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
 .wpcf7-submit:hover {
     background: inherit;
-    background-color: #266ee4;
+    background-color: #cc0000;
 }
 
 
@@ -1986,16 +1987,13 @@ body.freestore-page-styling-raised.woocommerce-page #container {
     display: none;
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1200px){
 .my-menu-right {
-    display: block !important;
-	float: left;
-    right: 0;
+    display: inline-block !important;
     width: 250px;
     height: 378px;
-    position: absolute;
     background: #fff;
-	margin-top: -20px;
+	
 }}
 
 
@@ -2059,7 +2057,38 @@ font-family:FontAwesome
 .top-footer{
 	margin-bottom: 5px;
 	margin-top:5px;
-	font-size: 30px;
+	font-size: 29px;
+}
+
+@media all and (max-width: 1200px){
+	.top-footer{
+	margin-bottom: 5px;
+	margin-top:5px;
+	font-size: 20px;
+}
+}
+
+@media all and (max-width: 733px){
+	.top-footer{
+	margin-bottom: 5px;
+	margin-top:5px;
+	font-size: 15px;
+}
+}
+
+@media all and (max-width: 480px){
+	.top-footer{
+	display:none !important;
+}
+	.center-footer{
+	display:none !important;
+	}
+	.bottom-footer{
+	
+	font-size:10px;
+	text-align:center;
+	
+}
 }
 
 .center-footer{
@@ -2080,8 +2109,6 @@ font-family:FontAwesome
 	margin-top: 5px;
 	
 }
-
-
 
 .cate-footer ul{
 	display:inline;
@@ -2121,10 +2148,21 @@ font-family:FontAwesome
 }
 
 .logo-footer{
+	padding-top:10px;
+	padding-left:5px;
+	padding-bottom:15px;
 	width:20%;
 	background: red;
-	margin-right:40px;
+	margin-right:10%;
 	float:left;
+}
+
+.hot-line{
+	vertical-align:middle;
+	margin-bottom: -20px;
+    background-color: #e3e3e3;
+    padding-right: 60px;
+    margin-left: -40px;
 }
 
 .savept-new{
@@ -2277,7 +2315,7 @@ margin-left: 3px;
 }
 
 .header-nav{
-	background: #e96656;
+	background: #EA151E;
 	padding: 0px 0 10px 0;
 	display: -webkit-inline-box;
 }
@@ -2322,7 +2360,7 @@ margin-left: 3px;
   line-height: 40px;
   font-family: 'FontAwesome';
   content: '\f002';
-  background: #8FC357;
+  background: #000;
   text-align: center;
   color: #fff;
   border-radius: 5px;
@@ -2335,7 +2373,7 @@ margin-left: 3px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  border: 5px solid #8FC357;
+  border: 3px solid #000;
   padding: 5px;
   height: 40px;
   border-radius: 5px;
@@ -2356,6 +2394,9 @@ margin-left: 3px;
 }
 
 @media (max-width: 720px){
+	.navbar .container{
+		margin-left: 0;
+	}
 	.navbar .logo{
 	max-width:50px ;
 	margin-top: 10px;
@@ -2370,34 +2411,37 @@ margin-left: 3px;
 		margin-left: 30px;
 		display: none;
 	}
-	.search_menu_768px{
+	/*.search_menu_768px{
  	width: 90%;
     margin-left: 5%;
     display: block;
-}
-.slider-image{
-	margin-top: -70px !important;
-}
-.menu-search-id{
-	height: 30px;
-	margin-top: 30px;
+    position: absolute;
+    margin-bottom: 2%; 
+    margin-top: 3%;  
+}*/
 
+.slider-image{
+	display: none !important;
 }
+
 .menu-search-id{
+	margin-top: 19%;
 	margin-bottom: 10px;
 	display: block !important;
+	width: 90%;
+	margin-left: 5%;
+	
 }
 .navbar .cart{
 	position: absolute;
 	right: 5px;
-
 }
 
 }
 .menu-search-id{
 	display: none;
     z-index: 51;
-    top: 2px;
+   
 }
 
 .icon-cart-item{
@@ -2426,18 +2470,44 @@ margin-left: 3px;
 .navbar .logo a{
 	display:  none;
 }
-.slider-image{
-	
-	width: 100%;
-}
+
 }
 .danhmuc{
 	height: 50px;
 }
 .slider-image{
-	margin-top:-20px;
-	margin-bottom: 80px;
+	
 	display:inline-block;
-	width: 100%;
 	float: left;
+	margin-bottom: 10px;
+}
+
+#nc_ajax_cart_mini_cart ul
+{
+	margin: 0 0 0 0;
+}
+.ms-slide-bgcont img{
+width: 100% !important;
+height: 100% !important;
+margin : 0 !important;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {
+    margin: 0 0px 0 0;
+    height: auto;
+    display: inline !important;
+}
+.menu-sanpham{
+	float:  left;
+	width: 250px;
+	
+}
+.menu-sanpham li{
+	padding-left: 10px;
+}
+.menu-sanpham h3{
+	padding: 10px;
+	background: #E8E8E8;
+	margin-bottom: 0px;
+	margin-top: 0px;
+
 }
