@@ -49,6 +49,10 @@ global $woocommerce;
 						//echo dynamic_sidebar("search_id");
 						?> 	
 					</div>
+					<!-- Hot Line Header -->
+					<span class="header-icon-hotline header-hotline">
+						<a href="tel:+84962 439 186"><em><strong>Hotline : 0962 439 186</strong></em></a>
+					</span>
 		</div>   
 	</nav>	
 			<div class="menu-search-id">
