@@ -2055,9 +2055,12 @@ font-family:FontAwesome
 }
 
 .top-footer{
+	padding-top:1%;
 	margin-bottom: 5px;
 	margin-top:5px;
-	font-size: 29px;
+	font-size: 25px;
+	max-width: 1180px;
+    border-top: 3px solid #000;
 }
 
 @media all and (max-width: 1200px){
@@ -2066,6 +2069,7 @@ font-family:FontAwesome
 	margin-top:5px;
 	font-size: 20px;
 }
+	
 }
 
 @media all and (max-width: 733px){
@@ -2107,7 +2111,6 @@ font-family:FontAwesome
 	padding-left: 60px;
 	padding-right: 60px;
 	margin-top: 5px;
-	
 }
 
 .cate-footer ul{
@@ -2148,20 +2151,19 @@ font-family:FontAwesome
 }
 
 .logo-footer{
+	margin-left:1%;
 	padding-top:10px;
 	padding-left:5px;
 	padding-bottom:15px;
 	width:20%;
-	background: red;
-	margin-right:10%;
+	background: #EA151E;
+	margin-right:7%;
 	float:left;
 }
 
 .hot-line{
 	vertical-align:middle;
 	margin-bottom: -20px;
-    background-color: #e3e3e3;
-    padding-right: 60px;
     margin-left: -40px;
 }
 
@@ -2223,21 +2225,33 @@ margin-left: 3px;
 	font-weight: bold;
 }
 
+.giamgia{
+	left:25%;
+}
+
+.ganday{
+	left:20%;
+}
+
+@media all and (max-width: 1200px){
+	.ganday{
+	left:12%;
+}
+}
+
 .bar{
 	background: none !important;
     position: relative;
     top: 0px;
-    left: 250px;
     padding: 0 20px;
     border: none !important;
 }
 
-.bar>a{
+.bar>li>a{
 	margin-right: 2px;
     line-height: 1.42857143;
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0;
-	
 }
 
 .bar-item>li>a{
@@ -2251,11 +2265,11 @@ margin-left: 3px;
 }
 
 .bar-item{
-	margin-bottom: 15px;
+	margin-bottom: 1.5%;
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	padding: 0px 15px 10px 15px;
-	min-height: 15px;
+	padding: 0px 1.5% 1% 1.5%;
+	min-height: 1.5%;
 	background-color: transparent;
 }
 
@@ -2275,7 +2289,7 @@ margin-left: 3px;
     box-shadow: none;
     border: 0;
     border-top: 3px solid red;
-    line-height: 35px;
+    line-height: 3.5%;
 }
 
 .bar-item>li.active>a,.bar-item>li.active>a:hover.bar-item>li.active>a:focus{
@@ -2285,6 +2299,21 @@ margin-left: 3px;
 	font-size: 12px !important;
 	border-top: 2px solid red;
 	box-shadow: none;
+}
+
+@media all and (max-width: 660px){
+	.bar{
+		display:none;
+	}
+	.bar-item{
+		display:none;
+	}
+	.giamgia{
+		display:none;
+		}
+	.ganday{
+		display:none;
+	}	
 }
 
 .woocommerce-ordering {
@@ -2425,12 +2454,11 @@ margin-left: 3px;
 }
 
 .menu-search-id{
-	margin-top: 19%;
 	margin-bottom: 10px;
 	display: block !important;
 	width: 90%;
 	margin-left: 5%;
-	
+	margin-top: 65px;
 }
 .navbar .cart{
 	position: absolute;
@@ -2499,15 +2527,58 @@ margin : 0 !important;
 .menu-sanpham{
 	float:  left;
 	width: 250px;
+	border-left: 4px solid #f1f1f1;
 	
 }
 .menu-sanpham li{
 	padding-left: 10px;
 }
-.menu-sanpham h3{
+.menu-sanpham h4{
+	margin-left: -4px;
 	padding: 10px;
 	background: #E8E8E8;
 	margin-bottom: 0px;
 	margin-top: 0px;
+	border-left: 4px solid #000;
+	font-size: 13px;
+	font-weight: bolder;
+	padding: 11px 15px;
+}
 
+.scrollToTop{
+	position: fixed;
+	bottom: 69px;
+	right: 25px;
+
+	padding: 10px 10px 10px 10px;
+	border-radius:100%;
+}
+.scrollToTop i{
+	font-size: 50px;
+	color:red;
+}
+.scrollToTop a:hover{
+	color: white;
+}
+@media(max-width: 1200px){
+	.menu-sanpham {
+		display: none;
+	}
+	.slider-image{
+		width: 100%;
+	}
+}
+
+.woocommerce .star-rating {
+    color: red;
+}
+
+#secondary .widget ul li
+{
+	font-size: 18px;
+}
+
+#secondary .widget ul li img
+{
+	width: 64px;
 }

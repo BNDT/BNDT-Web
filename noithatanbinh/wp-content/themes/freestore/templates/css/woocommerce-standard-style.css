@@ -81,7 +81,7 @@
     float: left;
     list-style-type: none;
     position: relative;
-	height: 400px;
+	height: 450px;
     /*
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 	*/
@@ -140,6 +140,8 @@
 .woocommerce-page ul.products li.product a img {
     box-shadow: none !important;
     display: block;
+	width: 80%;
+	margin-left: 10%;
 }
 
 .woocommerce ul.products li.product h3,
@@ -833,8 +835,11 @@
     
     .woocommerce ul.products li.product,
     .woocommerce-page ul.products li.product {
-        width: 100%;
-        margin: 0 0 24px;
+        /* Tin change
+		
+		width: 100%;
+		*/
+        margin: 0 5px 24px;
     }
     
     .woocommerce .cart-collaterals .cart_totals,
@@ -916,6 +921,7 @@
     .woocommerce-page ul.products li.product {
         width: 100%;
         margin: 0 0 47px;
+		height: 450px;
     }
     
 }

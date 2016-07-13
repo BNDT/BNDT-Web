@@ -16,8 +16,8 @@ get_header(); ?>
 	
 	<!-- Start Slider -->
 	<div class='container' >
-	<div class='menu-sanpham' style="">
-	<h3>Danh Mục Sản Phẩm</h3>
+	<div class='menu-sanpham ' >
+	<h4> DANH MỤC SẢN PHẨM </h4	>
 	
 	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</div>
@@ -45,6 +45,7 @@ get_header(); ?>
       </div>
     </span>
     </div>
+    
 	<!-- End Right -->
 	<?php if ( is_home() ) : ?>
 	<div id="primary" class="content-area <?php echo ( get_theme_mod( 'freestore-blog-full-width', false ) ) ? sanitize_html_class( ' content-area-full' ) : ''; ?> col-xs-12" style="width:100%">
@@ -57,7 +58,7 @@ get_header(); ?>
 			<div class="box">
 				<div class="title-bar col-xs-12">
 					<span class="bar-header">Sản Phẩm Đang Giảm Giá</span>
-					<ul class="bar bar-item">
+					<ul class="bar bar-item giamgia">
 						<li><a href="<?php echo home_url()?>/xem-nhieu">Xem nhiều</a></li>
 						<li><a href="<?php echo home_url()?>/mua-nhieu">Mua nhiều nhất</a></li>
 						<li><a href="<?php echo home_url()?>/moi-nhat">Mới nhất</a></li>
@@ -71,7 +72,7 @@ get_header(); ?>
 		
 				<div class="title-bar col-xs-12">
 					<span class="bar-header">Sản Phẩm Mới Nhất</span>
-					<ul class="bar bar-item">
+					<ul class="bar bar-item ganday">
 					<?php 
 						  $taxonomy     = 'product_cat';
 						  $orderby      = 'name';  
@@ -91,10 +92,15 @@ get_header(); ?>
 								 'hide_empty'   => $empty
 						  );
 						$all_categories = get_categories( $args ); 
+						$i=0;
 						foreach($all_categories as $cat){
 							if($cat->category_parent == 0) {
+								$i++;
+								if($i==5)
+									break;
 								echo '<li><a href="'.get_term_link($cat->slug, 'product_cat').'/?filters=order-date">'.$cat->name.'</a></li>';
 							}
+							
 						}
 					?>
 					</ul>
@@ -121,3 +127,6 @@ get_header(); ?>
     
 <?php get_footer(); ?>
     <div class="clearboth"></div>
+<script type="text/javascript">
+	jQuery('#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link').append('<i class="fa fa-cart-arrow-down" aria-hidden="true" style="float: left;margin-right: 10px;  margin-top: 13px;border-radius: 100%;border: 1px solid #6E686E; padding:4px;padding-left: 5px;"></i>');
+</script>

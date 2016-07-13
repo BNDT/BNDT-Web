@@ -29,35 +29,35 @@ global $woocommerce;
 
 <div id="page" class="hfeed site <?php echo sanitize_html_class( get_theme_mod( 'freestore-slider-type' ) ); ?>" data-toggle="collapse" data-target="navbar-collapse">
 
-<nav class="navbar navbar-fixed-top header-nav " style="display: inline-flex;">
-<div class="container" style="display:inherit">
-<div class='danhmuc'><?php shailan_dropdown_menu(); ?></div>
+	<nav class="navbar navbar-fixed-top header-nav " style="display: inline-flex;">
+		<div class="container" style="display:inherit">
+			<div class='danhmuc'><?php shailan_dropdown_menu(); ?>
+			</div>
 					<div class='logo'>
-                    <a href="<?php echo get_home_url(); ?>" >
-						<img src="<?php echo get_stylesheet_directory_uri()?>/images/an-binh-logo.png" title="noi that an binh" alt="noi that an binh" class="img-responsive" />
-					</a>
-                </div>
-                 <form class="search_menu" action= "<?php echo get_home_url(); ?>/">
- 					 <input class="searchTerm" name="s" placeholder="Tìm Sản Phẩm..." />
-					 <input type="hidden" name="post_type" value="product">
-					 <input class="searchButton" type="submit" />
-				</form>
-				 <div class='cart'>
-					<?php 
-						echo do_shortcode('[nc_ajax_cart]'); 
+                    	<a href="<?php echo get_home_url(); ?>" >
+							<img src="<?php echo get_stylesheet_directory_uri()?>/images/an-binh-logo.png" title="noi that an binh" alt="noi that an binh" class="img-responsive" />
+						</a>
+              		 </div>
+                 	<form class="search_menu" action= "<?php echo get_home_url(); ?>/">
+ 						<input class="searchTerm" name="s" placeholder="Tìm Sản Phẩm..." />
+					 	<input type="hidden" name="post_type" value="product">
+					 	<input class="searchButton" type="submit" />
+					</form>
+					 <div class='cart'>
+						<?php 
+							echo do_shortcode('[nc_ajax_cart]'); 
 						//echo dynamic_sidebar("search_id");
-					?> 	
-				</div>
-       
-</nav>		
-</div>
-<div class="menu-search-id">
+						?> 	
+					</div>
+		</div>   
+	</nav>	
+			<div class="menu-search-id">
  				<form class="search_menu_768px" action= "<?php echo get_home_url(); ?>/">
  					 <input class="searchTerm" name="s" placeholder="Tìm Sản Phẩm..." />
 					 <input type="hidden" name="post_type" value="product">
 					 <input class="searchButton" type="submit" />
 				</form>
-				</div>
+			</div>
 
 	<div class="site-container <?php echo ( ! is_active_sidebar( 'sidebar-1' ) ) ? sanitize_html_class( 'content-no-sidebar' ) : sanitize_html_class( 'content-has-sidebar' ); ?>">
 

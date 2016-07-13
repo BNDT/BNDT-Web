@@ -10,7 +10,7 @@ get_header(); ?>
 			<div class="box">
 				<div class="title-bar col-xs-12">
 					<span class="bar-header">Sản Phẩm Được Xem Nhiều</span>
-					<ul class="bar bar-item">
+					<ul class="bar bar-item giamgia">
 						<li><a href="<?php echo home_url()?>/xem-nhieu">Xem nhiều</a></li>
 						<li><a href="<?php echo home_url()?>/mua-nhieu">Mua nhiều nhất</a></li>
 						<li><a href="<?php echo home_url()?>/moi-nhat">Mới nhất</a></li>

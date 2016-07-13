@@ -1,4 +1,6 @@
 <?php
+define( 'WPCACHEHOME', 'E:\xampp\htdocs\noithatanbinh\wp-content\plugins\wp-super-cache/' ); //Added by WP-Cache Manager
+define( 'WP_CACHE', true );
 /**
  * The base configuration for WordPress
  *

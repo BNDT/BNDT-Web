@@ -5,9 +5,8 @@ FreeStore - Footer Centered Styling
 .site-footer-centered {
     color: #000000;
     text-align: center;
-    max-width: 1180px;
     margin: 0 auto;
-    border-top: 3px solid #000;
+    
 }
 
 .site-footer-bottom-bar {
@@ -497,12 +496,6 @@ padding: 0;}
 	min-height: 200px;
 }
 /* footer */
-footer {
-	margin-top: 30px;
-	border-top: 2px solid #ececee;
-	color: #333;
-	background: #fff;
-}
 footer hr {
 	border-top: none;
 	border-bottom: 1px solid #666;
@@ -1638,11 +1631,6 @@ color: #999;
 }
 .cate-footer ul a.sub-cate:hover{
 color: #EF532A;
-}
-.top-footer{
-	padding-top: 10px;
-	padding-bottom: 5px;
-	margin-bottom: 20px;
 }
 
 .top-footer .link-footer{

@@ -423,21 +423,23 @@ class Footer_Form_Widget extends WP_Widget
         // Nội dung trong widget
          echo " <div class='container'>
 					<div class='row top-footer'>
+						<div class='container'>
 						<div class='logo-footer'>
 					<a href='#'>
 						<img  src ='".get_stylesheet_directory_uri()."/images/an-binh-logo.png' alt='Logo nội thất an bình'>
 					</a>
 			</div>	
 			
-	<div class='col-xs-4' style='margin-top:15px'>
+	<div class='col-xs-4' style='margin-top:1.5%'>
 		<span class='icon-hotline hot-line'>
 			<a href='tel:+84".$sdt."'><em>Hotline : ".$sdt."</em></a>
 		</span>
 	</div>
-	<div class='col-xs-4' style='float:right;margin-right:-1%'>
-		<div class='fb-page' data-href='https://www.facebook.com/sieuthinoithatanbinh/?fref=ts' data-tabs='' data-width='270' data-height='70' data-small-header='true' data-adapt-container-width='false' data-hide-cover='false' data-show-facepile='false' data-share='true'><blockquote class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/sieuthinoithatanbinh/?fref=ts'>Nội thất An Bình</a></blockquote>
+	<div class='col-xs-4' style='float:right;margin-right:3.7%'>
+		<div class='fb-page' data-href='https://www.facebook.com/sieuthinoithatanbinh/?fref=ts' data-tabs='' data-width='400' data-height='70' data-small-header='true' data-adapt-container-width='false' data-hide-cover='false' data-show-facepile='false' data-share='true'><blockquote class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/sieuthinoithatanbinh/?fref=ts'>Nội thất An Bình</a></blockquote>
 		</div>
 	</div>			
+	</div>
 	</div>
 	</div>
 	";
@@ -519,7 +521,7 @@ class Bottom_Footer_Widget extends WP_Widget
 						 'diachi' => 'Nhập Địa Chỉ',
 						 'chinhanh' => 'Nhập Chi Nhánh',
 						 'truso' => 'Nhập Trụ sở',
-						 'hotline' => 'Nhập số hotline');
+						);
         $instance=wp_parse_args((array)$instance,$default);
         $title=$instance['title'];
 		$diachi=$instance['diachi'];
@@ -534,8 +536,6 @@ class Bottom_Footer_Widget extends WP_Widget
          <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('chinhanh')."' value='".$chinhanh."' /></p>";
 		 echo "<p><label>Trụ sở:</label>
          <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('truso')."' value='".$truso."' /></p>";
-		 echo "<p><label>Hotline:</label>
-         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('hotline')."' value='".$hotline."' /></p>";
     }
 
     function update( $new_instance, $old_instance ) {
@@ -544,7 +544,7 @@ class Bottom_Footer_Widget extends WP_Widget
 		$instance['diachi']=$new_instance['diachi'];
 		$instance['chinhanh']=$new_instance['chinhanh'];
 		$instance['truso']=$new_instance['truso'];
-		$instance['hotline']=$new_instance['hotline'];
+		
        return $instance;
     }
     function widget( $args, $instance ) {
@@ -555,7 +555,7 @@ class Bottom_Footer_Widget extends WP_Widget
 		$diachi = $instance['diachi'];
 		$chinhanh = $instance['chinhanh'];
 		$truso = $instance['truso'];
-		$hotline = $instance['hotline'];
+		
         echo " 
 	<div class='container'>
 		<div class='bottom-footer row'>
@@ -563,7 +563,7 @@ class Bottom_Footer_Widget extends WP_Widget
 			ĐC GPKD : ".$diachi."<br/>
 			Trụ sở : ".$truso."<br/>
 			Chi nhánh : ".$chinhanh."<br/>
-			Hotline : ".$hotline."</p>
+			</p>
 		</div>
 	</div>	
             ";
