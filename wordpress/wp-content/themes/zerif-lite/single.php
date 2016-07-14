@@ -15,9 +15,9 @@ get_header(); ?>
 			<div id="primary" class="content-area">
 				<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" id="main" class="site-main" role="main">
 				<?php while ( have_posts() ) : the_post(); 
-						
+						 postview_set(get_the_ID());
 						 get_template_part( 'content', 'single' );
-						 
+						 echo postview_get(get_the_ID());
 						 zerif_post_nav(); 
 					 
 						// If comments are open or we have at least one comment, load up the comment template

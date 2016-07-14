@@ -6548,3 +6548,82 @@ float: left;
 
 	
 }
+
+/* Hiep */
+
+.icon-email:before{/* icon email */
+margin-right:5px;
+line-height:25px;
+content:"\f0e0";
+font-family:FontAwesome
+}
+
+.icon-hotline:before{ /* icon phone */
+margin-right:5px;
+line-height:25px;
+content:"\f098";
+font-family:FontAwesome
+}
+
+.footer-panel{
+	background-color: transparent;
+    border: none;
+    color: #fff;
+    box-shadow: none;
+    padding: 1%;
+}
+
+.footer-panel>.footer-header{
+	background-color: transparent;
+	border-bottom: 2px solid #fff;
+    color: #fff;
+    box-shadow: none;
+    padding: 1%;
+	text-align:left;
+}
+
+.footer-panel>.footer-body{
+	padding:1% 0 1% 0;
+	text-align:left;
+	
+}
+
+.bar-hr{
+	border-bottom:1px solid #fff;
+	margin:1% 0 1% 0;
+}
+
+.footer-list-item{
+	list-style:none;
+	padding:1%;
+	margin:1%;
+}
+
+.footer-list-item>li{
+	padding:4px;
+}
+
+.list-news{
+	padding:0
+}
+.list-news>li{
+	margin-bottom:10px
+}
+.list-news>li>span{
+	margin-left:1%;
+}
+
+.list-news>li>a>img:hover{
+	background-color:red;
+}
+
+li a img{
+	padding:0.5%;
+	line-height:1.42857143;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-radius:0.5%;
+	display:inline-block;
+	max-width:20%;
+	height:auto;
+}

@@ -1506,3 +1506,321 @@ register_sidebar(array(
     ));
 }
 add_action('widgets_init','Widget_Content');
+
+// Hiep
+
+// footer-1
+
+add_action('widgets_init','Footer_1');
+function Footer_1(){
+    register_widget('Footer_1_Widget');
+}
+
+class Footer_1_Widget extends WP_Widget
+{
+    function __construct()
+    {
+        parent::__construct(
+               'footer1',
+               'Form Footer 1' ,
+                array('description' => 'Forms Footer 1')
+            );
+    }
+    function form($instance){
+        parent::form($instance);
+        $default = array('title' => 'Thông tin liên hệ',
+                         'congty'=> 'Hãy Nhập Tên Công Ty',
+						 'diachi'=> 'Hãy Nhập Địa Chỉ',
+						 'dienthoai'=> 'Hãy Nhập Số Điện Thoại',
+						 'hotline'=> 'Hãy Nhập Hot-Line',
+						 'email'=> 'Hãy Nhập Email'
+                        );
+        $instance=wp_parse_args((array)$instance,$default);
+        $title=esc_attr($instance['title']);
+        $congty=$instance['congty'];
+		$diachi=$instance['diachi'];
+		$dienthoai=$instance['dienthoai'];
+		$hotline=$instance['hotline'];
+		$email=$instance['email'];
+		echo "<p><label>Title:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('title')."' value='".$title."' /></p>";
+         echo "<p><label>Tên Công Ty:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('congty')."' value='".$congty."' /></p>";
+		 echo "<p><label>Địa Chỉ:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('diachi')."' value='".$diachi."' /></p>";
+		 echo "<p><label>Diện Thoại:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('dienthoai')."' value='".$dienthoai."' /></p>";
+		 echo "<p><label>hotline:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('hotline')."' value='".$hotline."' /></p>";
+		 echo "<p><label>Email:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('email')."' value='".$email."' /></p>";
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title']=strip_tags($new_instance['title']);
+        $instance['congty']=$new_instance['congty'];
+		$instance['diachi']=$new_instance['diachi'];
+		$instance['dienthoai']=$new_instance['dienthoai'];
+		$instance['hotline']=$new_instance['hotline'];
+		$instance['email']=$new_instance['email'];
+       return $instance;
+    }
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $title=$instance['title'];
+        $congty=$instance['congty'];
+		$diachi=$instance['diachi'];
+		$dienthoai=$instance['dienthoai'];
+		$hotline=$instance['hotline'];
+		$email=$instance['email'];
+       
+         echo "
+		 <div class='footer-panel'>
+			<div class='footer-header'>".$title."</div>
+			<div class='footer-body'><span style='font-size:13px'><strong>".$congty."</strong></span><br/>
+			Địa chỉ: ".$diachi."<br/>
+			<span>Điện thoại: </span>".$dienthoai."<br/>
+			<span>Hotline: ".$hotline."</span><br/>
+			Email: ".$email."<br/>
+			</div>
+		</div>
+		";
+    }
+}
+
+
+// footer-2
+
+add_action('widgets_init','Footer_2');
+function Footer_2(){
+    register_widget('Footer_2_Widget');
+}
+
+class Footer_2_Widget extends WP_Widget
+{
+    function __construct()
+    {
+        parent::__construct(
+               'footer2',
+               'Form Footer 2' ,
+                array('description' => 'Forms Footer 2')
+            );
+    }
+
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        
+         echo "
+		 <div class='footer-panel'>
+			<div class='footer-header'>Thống Kê</div>
+			<div class='footer-body'>
+			<ul class='footer-list-item'>
+			<li><em class='fa fa-bolt fa-lg'>&nbsp;</em> Đang truy cập <span class='pull-right'>1</span></li>
+			</ul>
+			<div class='bar-hr'></div>
+			<ul class='footer-list-item'>
+				<li><em class='fa fa-filter fa-lg'>&nbsp;</em> Hôm nay 
+				<span class='pull-right'>1,137</span></li>
+				<li><em class='fa fa-calendar-o fa-lg'></em> Tháng hiện tại <span class='pull-right'>18,178</span></li>
+				<li><em class='fa fa-bars fa-lg'>&nbsp;</em> Tổng lượt truy cập <span class='pull-right'>186,670</span></li>
+			</ul>
+			</div>
+		 </div>	
+		 ";
+    }
+}
+
+
+add_action('widgets_init','Footer_bottom');
+function Footer_bottom(){
+    register_widget('Footer_bottom_Widget');
+}
+
+class Footer_bottom_Widget extends WP_Widget
+{
+    function __construct()
+    {
+        parent::__construct(
+               'footerbottom',
+               'Form Footer bottom' ,
+                array('description' => 'Forms Footer bottom')
+            );
+    }
+	
+	function form($instance){
+        parent::form($instance);
+        $default = array('hotline' => 'hotline',
+                         'email'=> 'email',
+                        );
+        $instance=wp_parse_args((array)$instance,$default);
+        $hotline=esc_attr($instance['hotline']);
+		$email=$instance['email'];
+          echo "<p><label>Hotline:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('hotline')."' value='".$hotline."' /></p>";
+		 echo "<p><label>Email:</label>
+         <input type='text' style='width:100%' class='widefat' name='".$this->get_field_name('email')."' value='".$email."' /></p>";
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['hotline']=strip_tags($new_instance['hotline']);
+		$instance['email']=$new_instance['email'];
+        return $instance;
+    }
+	
+    function widget( $args, $instance ) {
+ 
+        extract( $args );
+        $hotline=$instance['hotline'];
+		$email=$instance['email'];
+         echo "
+<div class='container'>
+	<div class='pull-left'>
+		<div class='footer-panel footer-body'>
+			<span class='icon-hotline'> HOTLINE: ".$hotline." -   </span>
+			<span class='icon-email' style='margin-left:3%'> EMAIL: </span><a href='mailto:".$email."'>".$email."</a>
+		</div>
+	</div>
+ </div>
+		 ";
+    }
+}
+
+function Bottom_Footer(){
+register_sidebar(array(
+        'name'=> 'Bottom Footer',
+        'id'=>'bottom_footer',
+    ));
+}
+add_action('widgets_init','Bottom_Footer');
+
+
+// footer-3
+
+// đếm lượt xem
+
+function postview_set($postID) {
+    $count_key = 'postview_number';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+function postview_get($postID){
+    $count_key = 'postview_number';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 lượt xem";
+    }
+    return $count.' lượt xem';
+}
+
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+// widget 
+
+add_action('widgets_init','Footer_3');
+function Footer_3(){
+    register_widget('Footer_3_Widget');
+}
+
+class Footer_3_Widget extends WP_Widget
+{
+	function __construct()
+    {
+        parent::__construct(
+               'footer3',
+               'Form Footer 3' ,
+                array('description' => 'Forms Footer 3')
+            );
+    }
+    
+    function form($instance) {
+        $default = array(
+            'title' => 'Xem Nhiều',
+            'postnum' => 5,
+            'postdate' => 30
+        );
+        $instance = wp_parse_args( (array) $instance, $default );
+        $title = esc_attr( $instance['title'] );
+        $postnum = esc_attr( $instance['postnum'] );
+        $postdate = esc_attr( $instance['postdate'] );
+ 
+        echo "<label>Tiêu đề:</label> <input class='widefat' type='text' name='".$this->get_field_name('title')."' value='".$title."' />";
+        echo "<label>Số lượng bài viết:</label> <input class='widefat' type='number' name='".$this->get_field_name('postnum')."' value='".$postnum."' />";
+        echo "<label>Độ tuổi của bài viết (ngày)</label> <input class='widefat' type='number' name='".$this->get_field_name('postdate')."' value='".$postdate."' />";
+    }
+ 
+    /*
+     * Cập nhật dữ liệu nhập vào form tùy chọn trong database
+     */
+    function update($new_instance, $old_instance) {
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['postnum'] = strip_tags($new_instance['postnum']);
+        $instance['postdate'] = strip_tags($new_instance['postdate']);
+        return $instance;
+    }
+ 
+    function widget($args, $instance) {
+        global $postdate; // Thiết lập biến $postdate là biến toàn cục để dùng ở hàm filter_where
+        extract( $args );
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $postnum = $instance['postnum'];
+        $postdate = $instance['postdate'];
+
+		echo "
+		 <div class='footer-panel'>
+			<div class='footer-header'>".$title."</div>
+			<div class='footer-body'>";
+ 
+        $query_args = array(
+            'posts_per_page' => $postnum,
+            'meta_key' => 'postview_number',
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC',
+            'ignore_sticky_posts' => -1
+        );
+ 
+        /*
+         * Cách lấy bài viết theo độ tuổi (-30 days = lấy bài được 30 ngày tuổi)
+         * @tham khảo tại http://bit.ly/1y7WXFp
+         */
+        function filter_where( $where = '' ) {
+            global $postdate;
+            $where .= " AND post_date > '" . date('Y-m-d', strtotime('-'.$postdate.' days')) . "'";
+            return $where;
+        }
+        add_filter( 'posts_where', 'filter_where' );
+ 
+        $postview_query = new WP_Query( $query_args );
+ 
+        remove_filter( 'posts_where', 'filter_where' ); // Xóa filter để tránh ảnh hưởng đến query khác
+ 
+        if ($postview_query->have_posts() ) :
+            echo "<ul class='list-news'>";
+            while ( $postview_query->have_posts() ) :
+                $postview_query->the_post(); ?>
+                    <li>
+                        <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+                        <span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+                    </li>
+ 
+            <?php endwhile;
+            echo "</ul></div>";
+            endif;
+            echo "</div>";
+	}
+}
