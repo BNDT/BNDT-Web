@@ -1,4 +1,4 @@
-﻿/*
+/*
 Theme Name: Zerif Lite
 Theme URI: http://themeisle.com/themes/zerif-lite/
 Author: ThemeIsle
@@ -5711,6 +5711,11 @@ p.edd-alert-error,
 
 }
 
+@media (min-height: 170px){
+	#main-nav{
+		min-height: 76px !important;
+	}
+}
 
 /* [end] Easy Digital Downloads */
 
@@ -6542,18 +6547,4 @@ float: left;
 .mid  legend.legendStyle{
 
 	
-}
-
-.icon-email:before{/* icon email */
-margin-right:5px;
-line-height:25px;
-content:"\f0e0";
-font-family:FontAwesome
-}
-
-.icon-hotline:before{ /* icon phone */
-margin-right:5px;
-line-height:25px;
-content:"\f098";
-font-family:FontAwesome
 }

@@ -371,7 +371,8 @@ function setminHeightHeader()
 {
     jQuery('#main-nav').css('min-height','75px');
     jQuery('.header').css('min-height','75px');
-    var minHeight = parseInt( jQuery('#main-nav').height() );
+    //var minHeight = parseInt( jQuery('#main-nav').height() );
+    var minHeight = '76px';
     jQuery('#main-nav').css('min-height',minHeight);
     jQuery('.header').css('min-height',minHeight);
 }
